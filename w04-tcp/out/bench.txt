@@ -1,0 +1,27 @@
+Command: python3 bench.py --yours
+
+  link 1 pkt/slot, RTT 20 slots, queue 10, 4000 slots
+
+  baseline   goodput  986.8/1000 slots   loss  37.4%   retx  2340   avg queue   8.8
+  yours      goodput  955.0/1000 slots   loss   1.9%   retx    73   avg queue   2.3
+
+   ok    loss at most 5%
+   ok    average queue at most 5.0
+   goodput 97% of the baseline
+
+   -> strong
+
+  Note that the baseline still has the highest goodput here.
+  observation.md: why is it the worst sender anyway?
+
+Backoff comparison (python3 backoff_experiment.py; same 0.05/window ACK growth):
+factor  goodput/1000  loss fraction         avg queue
+0.50    698.50        0.020884093282283328   0.24950
+0.60    955.00        0.018631955079122003   2.25975
+0.65    974.25        0.020459081836327345   5.67850
+0.70    975.25        0.022891266484200050   5.00700
+0.80    977.75        0.031718711581017950   6.67325
+
+Selected factor 0.60. Final window: 25.913630503791797 packets.
+Loss-driven cuts observed: 82 -> 49.2 -> about 29.54 -> about 17.78,
+with ACK-driven growth between cuts. The controller does not read link internals.
