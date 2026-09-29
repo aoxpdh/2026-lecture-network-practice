@@ -74,10 +74,18 @@ class YourCache:
 
     def __init__(self, upstream):
         self.upstream = upstream
-        raise NotImplementedError("write your cache")
+        self.entries = {}
 
     def lookup(self, name, now):
-        raise NotImplementedError("write your cache")
+        entry = self.entries.get(name)
+        if entry is not None and now < entry[1]:
+            return entry[0]
+        address, ttl = self.upstream(name)
+        if ttl > 0:
+            self.entries[name] = (address, now + ttl)
+        else:
+            self.entries.pop(name, None)
+        return address
 
     def stats(self):
-        return {}
+        return {"entries": len(self.entries)}

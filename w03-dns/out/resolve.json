@@ -1,0 +1,2835 @@
+[
+  {
+    "name": "www.korea.ac.kr",
+    "kind": "stable",
+    "address": "163.152.6.10",
+    "path": [
+      "198.41.0.4",
+      "210.101.61.1",
+      "163.152.11.6"
+    ],
+    "reference": [
+      "163.152.6.10"
+    ],
+    "events": [
+      {
+        "name": "www.korea.ac.kr",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "kr",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c.dns.kr"
+            },
+            {
+              "name": "kr",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "e.dns.kr"
+            },
+            {
+              "name": "kr",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d.dns.kr"
+            },
+            {
+              "name": "kr",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "g.dns.kr"
+            },
+            {
+              "name": "kr",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "f.dns.kr"
+            },
+            {
+              "name": "kr",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b.dns.kr"
+            }
+          ],
+          "additional": [
+            {
+              "name": "c.dns.kr",
+              "ttl": 172800,
+              "type": "A",
+              "value": "210.101.61.1"
+            },
+            {
+              "name": "e.dns.kr",
+              "ttl": 172800,
+              "type": "A",
+              "value": "202.30.124.100"
+            },
+            {
+              "name": "e.dns.kr",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:dcc:5::100"
+            },
+            {
+              "name": "d.dns.kr",
+              "ttl": 172800,
+              "type": "A",
+              "value": "203.83.159.1"
+            },
+            {
+              "name": "d.dns.kr",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:dcc:4::1"
+            },
+            {
+              "name": "g.dns.kr",
+              "ttl": 172800,
+              "type": "A",
+              "value": "202.31.190.1"
+            },
+            {
+              "name": "g.dns.kr",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:dc5:a::1"
+            },
+            {
+              "name": "f.dns.kr",
+              "ttl": 172800,
+              "type": "A",
+              "value": "210.101.62.1"
+            },
+            {
+              "name": "f.dns.kr",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:dcc:6::1"
+            },
+            {
+              "name": "b.dns.kr",
+              "ttl": 172800,
+              "type": "A",
+              "value": "210.101.60.1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.korea.ac.kr",
+        "server": "210.101.61.1",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "korea.ac.kr",
+              "ttl": 86400,
+              "type": "NS",
+              "value": "kucc.korea.ac.kr"
+            },
+            {
+              "name": "korea.ac.kr",
+              "ttl": 86400,
+              "type": "NS",
+              "value": "kuccgx.korea.ac.kr"
+            }
+          ],
+          "additional": [
+            {
+              "name": "kucc.korea.ac.kr",
+              "ttl": 86400,
+              "type": "A",
+              "value": "163.152.11.6"
+            },
+            {
+              "name": "kuccgx.korea.ac.kr",
+              "ttl": 86400,
+              "type": "A",
+              "value": "163.152.1.1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.korea.ac.kr",
+        "server": "163.152.11.6",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "www.korea.ac.kr",
+              "ttl": 3600,
+              "type": "A",
+              "value": "163.152.6.10"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "dns.google",
+    "kind": "stable",
+    "address": "8.8.4.4",
+    "path": [
+      "198.41.0.4",
+      "216.239.34.105",
+      "216.239.38.114"
+    ],
+    "reference": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "events": [
+      {
+        "name": "dns.google",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "google",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns-tld2.charlestonroadregistry.com"
+            },
+            {
+              "name": "google",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns-tld4.charlestonroadregistry.com"
+            },
+            {
+              "name": "google",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns-tld1.charlestonroadregistry.com"
+            },
+            {
+              "name": "google",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns-tld3.charlestonroadregistry.com"
+            },
+            {
+              "name": "google",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns-tld5.charlestonroadregistry.com"
+            }
+          ],
+          "additional": [
+            {
+              "name": "ns-tld2.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "216.239.34.105"
+            },
+            {
+              "name": "ns-tld2.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:4860:4802:34::69"
+            },
+            {
+              "name": "ns-tld4.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "216.239.38.105"
+            },
+            {
+              "name": "ns-tld4.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:4860:4802:38::69"
+            },
+            {
+              "name": "ns-tld1.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "216.239.32.105"
+            },
+            {
+              "name": "ns-tld1.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:4860:4802:32::69"
+            },
+            {
+              "name": "ns-tld3.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "216.239.36.105"
+            },
+            {
+              "name": "ns-tld3.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:4860:4802:36::69"
+            },
+            {
+              "name": "ns-tld5.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "216.239.60.105"
+            },
+            {
+              "name": "ns-tld5.charlestonroadregistry.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:4860:4805::69"
+            }
+          ]
+        }
+      },
+      {
+        "name": "dns.google",
+        "server": "216.239.34.105",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "dns.google",
+              "ttl": 10800,
+              "type": "NS",
+              "value": "ns4.zdns.google"
+            },
+            {
+              "name": "dns.google",
+              "ttl": 10800,
+              "type": "NS",
+              "value": "ns2.zdns.google"
+            },
+            {
+              "name": "dns.google",
+              "ttl": 10800,
+              "type": "NS",
+              "value": "ns1.zdns.google"
+            },
+            {
+              "name": "dns.google",
+              "ttl": 10800,
+              "type": "NS",
+              "value": "ns3.zdns.google"
+            }
+          ],
+          "additional": [
+            {
+              "name": "ns3.zdns.google",
+              "ttl": 3600,
+              "type": "A",
+              "value": "216.239.36.114"
+            },
+            {
+              "name": "ns3.zdns.google",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2001:4860:4802:36::72"
+            },
+            {
+              "name": "ns2.zdns.google",
+              "ttl": 3600,
+              "type": "A",
+              "value": "216.239.34.114"
+            },
+            {
+              "name": "ns2.zdns.google",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2001:4860:4802:34::72"
+            },
+            {
+              "name": "ns4.zdns.google",
+              "ttl": 3600,
+              "type": "A",
+              "value": "216.239.38.114"
+            },
+            {
+              "name": "ns4.zdns.google",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2001:4860:4802:38::72"
+            },
+            {
+              "name": "ns1.zdns.google",
+              "ttl": 3600,
+              "type": "A",
+              "value": "216.239.32.114"
+            },
+            {
+              "name": "ns1.zdns.google",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2001:4860:4802:32::72"
+            }
+          ]
+        }
+      },
+      {
+        "name": "dns.google",
+        "server": "216.239.38.114",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "dns.google",
+              "ttl": 900,
+              "type": "A",
+              "value": "8.8.4.4"
+            },
+            {
+              "name": "dns.google",
+              "ttl": 900,
+              "type": "A",
+              "value": "8.8.8.8"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "en.wikipedia.org",
+    "kind": "stable",
+    "address": "103.102.166.224",
+    "path": [
+      "198.41.0.4",
+      "199.249.112.1",
+      "208.80.154.238",
+      "198.41.0.4",
+      "199.249.112.1",
+      "208.80.154.238"
+    ],
+    "reference": [
+      "103.102.166.224"
+    ],
+    "events": [
+      {
+        "name": "en.wikipedia.org",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a2.org.afilias-nst.info"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b2.org.afilias-nst.org"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d0.org.afilias-nst.org"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a0.org.afilias-nst.info"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b0.org.afilias-nst.org"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c0.org.afilias-nst.info"
+            }
+          ],
+          "additional": [
+            {
+              "name": "a2.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.249.112.1"
+            },
+            {
+              "name": "a2.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:40::1"
+            },
+            {
+              "name": "b2.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.249.120.1"
+            },
+            {
+              "name": "b2.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:48::1"
+            },
+            {
+              "name": "d0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.57.1"
+            },
+            {
+              "name": "d0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:f::1"
+            },
+            {
+              "name": "a0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.56.1"
+            },
+            {
+              "name": "a0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:e::1"
+            },
+            {
+              "name": "b0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.54.1"
+            },
+            {
+              "name": "b0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:c::1"
+            },
+            {
+              "name": "c0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.53.1"
+            },
+            {
+              "name": "c0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:b::1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "en.wikipedia.org",
+        "server": "199.249.112.1",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "wikipedia.org",
+              "ttl": 3600,
+              "type": "NS",
+              "value": "ns0.wikimedia.org"
+            },
+            {
+              "name": "wikipedia.org",
+              "ttl": 3600,
+              "type": "NS",
+              "value": "ns1.wikimedia.org"
+            },
+            {
+              "name": "wikipedia.org",
+              "ttl": 3600,
+              "type": "NS",
+              "value": "ns2.wikimedia.org"
+            }
+          ],
+          "additional": [
+            {
+              "name": "ns0.wikimedia.org",
+              "ttl": 3600,
+              "type": "A",
+              "value": "208.80.154.238"
+            },
+            {
+              "name": "ns0.wikimedia.org",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2620:0:861:53::1"
+            },
+            {
+              "name": "ns1.wikimedia.org",
+              "ttl": 3600,
+              "type": "A",
+              "value": "208.80.153.231"
+            },
+            {
+              "name": "ns1.wikimedia.org",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2620:0:860:53::1"
+            },
+            {
+              "name": "ns2.wikimedia.org",
+              "ttl": 3600,
+              "type": "A",
+              "value": "198.35.27.27"
+            },
+            {
+              "name": "ns2.wikimedia.org",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2a02:ec80:53::1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "en.wikipedia.org",
+        "server": "208.80.154.238",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "en.wikipedia.org",
+              "ttl": 86400,
+              "type": "CNAME",
+              "value": "dyna.wikimedia.org"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      },
+      {
+        "name": "dyna.wikimedia.org",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a2.org.afilias-nst.info"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b2.org.afilias-nst.org"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d0.org.afilias-nst.org"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a0.org.afilias-nst.info"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b0.org.afilias-nst.org"
+            },
+            {
+              "name": "org",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c0.org.afilias-nst.info"
+            }
+          ],
+          "additional": [
+            {
+              "name": "a2.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.249.112.1"
+            },
+            {
+              "name": "a2.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:40::1"
+            },
+            {
+              "name": "b2.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.249.120.1"
+            },
+            {
+              "name": "b2.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:48::1"
+            },
+            {
+              "name": "d0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.57.1"
+            },
+            {
+              "name": "d0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:f::1"
+            },
+            {
+              "name": "a0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.56.1"
+            },
+            {
+              "name": "a0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:e::1"
+            },
+            {
+              "name": "b0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.54.1"
+            },
+            {
+              "name": "b0.org.afilias-nst.org",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:c::1"
+            },
+            {
+              "name": "c0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "A",
+              "value": "199.19.53.1"
+            },
+            {
+              "name": "c0.org.afilias-nst.info",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:b::1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "dyna.wikimedia.org",
+        "server": "199.249.112.1",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "wikimedia.org",
+              "ttl": 3600,
+              "type": "NS",
+              "value": "ns0.wikimedia.org"
+            },
+            {
+              "name": "wikimedia.org",
+              "ttl": 3600,
+              "type": "NS",
+              "value": "ns1.wikimedia.org"
+            },
+            {
+              "name": "wikimedia.org",
+              "ttl": 3600,
+              "type": "NS",
+              "value": "ns2.wikimedia.org"
+            }
+          ],
+          "additional": [
+            {
+              "name": "ns0.wikimedia.org",
+              "ttl": 3600,
+              "type": "A",
+              "value": "208.80.154.238"
+            },
+            {
+              "name": "ns1.wikimedia.org",
+              "ttl": 3600,
+              "type": "A",
+              "value": "208.80.153.231"
+            },
+            {
+              "name": "ns2.wikimedia.org",
+              "ttl": 3600,
+              "type": "A",
+              "value": "198.35.27.27"
+            },
+            {
+              "name": "ns0.wikimedia.org",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2620:0:861:53::1"
+            },
+            {
+              "name": "ns1.wikimedia.org",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2620:0:860:53::1"
+            },
+            {
+              "name": "ns2.wikimedia.org",
+              "ttl": 3600,
+              "type": "AAAA",
+              "value": "2a02:ec80:53::1"
+            }
+          ]
+        }
+      },
+      {
+        "name": "dyna.wikimedia.org",
+        "server": "208.80.154.238",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "dyna.wikimedia.org",
+              "ttl": 180,
+              "type": "A",
+              "value": "103.102.166.224"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "www.stanford.edu",
+    "kind": "stable",
+    "address": "3.33.186.135",
+    "path": [
+      "198.41.0.4",
+      "192.31.80.30",
+      "171.64.7.88",
+      "198.41.0.4",
+      "192.41.162.30",
+      "45.54.30.1"
+    ],
+    "reference": [
+      "15.197.167.90",
+      "3.33.186.135"
+    ],
+    "events": [
+      {
+        "name": "www.stanford.edu",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "f.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "h.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "l.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "j.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "e.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "g.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "i.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "m.edu-servers.net"
+            },
+            {
+              "name": "edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "k.edu-servers.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "d.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.31.80.30"
+            },
+            {
+              "name": "d.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:856e::30"
+            },
+            {
+              "name": "b.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.33.14.30"
+            },
+            {
+              "name": "b.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:231d::2:30"
+            },
+            {
+              "name": "f.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.35.51.30"
+            },
+            {
+              "name": "f.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d414::30"
+            },
+            {
+              "name": "h.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.54.112.30"
+            },
+            {
+              "name": "h.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:8cc::30"
+            },
+            {
+              "name": "l.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.41.162.30"
+            },
+            {
+              "name": "l.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:d937::30"
+            },
+            {
+              "name": "j.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.48.79.30"
+            },
+            {
+              "name": "j.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:7094::30"
+            },
+            {
+              "name": "e.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.12.94.30"
+            },
+            {
+              "name": "e.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:1ca1::30"
+            },
+            {
+              "name": "c.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.26.92.30"
+            },
+            {
+              "name": "c.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:83eb::30"
+            },
+            {
+              "name": "a.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.5.6.30"
+            },
+            {
+              "name": "a.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:a83e::2:30"
+            },
+            {
+              "name": "g.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.42.93.30"
+            },
+            {
+              "name": "g.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:eea3::30"
+            },
+            {
+              "name": "i.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.43.172.30"
+            },
+            {
+              "name": "i.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:39c1::30"
+            },
+            {
+              "name": "m.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.55.83.30"
+            },
+            {
+              "name": "m.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:501:b1f9::30"
+            },
+            {
+              "name": "k.edu-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.52.178.30"
+            },
+            {
+              "name": "k.edu-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d2d::30"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.stanford.edu",
+        "server": "192.31.80.30",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "stanford.edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "avallone.stanford.edu"
+            },
+            {
+              "name": "stanford.edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "atalante.stanford.edu"
+            },
+            {
+              "name": "stanford.edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "argus.stanford.edu"
+            },
+            {
+              "name": "stanford.edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns5.dnsmadeeasy.com"
+            },
+            {
+              "name": "stanford.edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns6.dnsmadeeasy.com"
+            },
+            {
+              "name": "stanford.edu",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns7.dnsmadeeasy.com"
+            }
+          ],
+          "additional": [
+            {
+              "name": "avallone.stanford.edu",
+              "ttl": 172800,
+              "type": "A",
+              "value": "171.64.7.88"
+            },
+            {
+              "name": "avallone.stanford.edu",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2607:f6d0:0:9116::ab40:758"
+            },
+            {
+              "name": "atalante.stanford.edu",
+              "ttl": 172800,
+              "type": "A",
+              "value": "171.64.7.61"
+            },
+            {
+              "name": "atalante.stanford.edu",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2607:f6d0:0:d32::ab40:73d"
+            },
+            {
+              "name": "argus.stanford.edu",
+              "ttl": 172800,
+              "type": "A",
+              "value": "171.64.7.115"
+            },
+            {
+              "name": "argus.stanford.edu",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2607:f6d0:0:9113::ab40:773"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.stanford.edu",
+        "server": "171.64.7.88",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "www.stanford.edu",
+              "ttl": 1800,
+              "type": "CNAME",
+              "value": "stanford.netlifyglobalcdn.com"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      },
+      {
+        "name": "stanford.netlifyglobalcdn.com",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "l.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "j.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "h.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "f.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "k.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "m.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "i.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "g.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "e.gtld-servers.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.41.162.30"
+            },
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:d937::30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.48.79.30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:7094::30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.54.112.30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:8cc::30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.31.80.30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:856e::30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.33.14.30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:231d::2:30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.35.51.30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d414::30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.52.178.30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d2d::30"
+            },
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.55.83.30"
+            },
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:501:b1f9::30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.43.172.30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:39c1::30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.42.93.30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:eea3::30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.5.6.30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:a83e::2:30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.26.92.30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:83eb::30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.12.94.30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:1ca1::30"
+            }
+          ]
+        }
+      },
+      {
+        "name": "stanford.netlifyglobalcdn.com",
+        "server": "192.41.162.30",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "dns1.p02.nsone.net"
+            },
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "dns2.p02.nsone.net"
+            },
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "dns3.p02.nsone.net"
+            },
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "dns4.p02.nsone.net"
+            },
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns01.netlifydns.com"
+            },
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns02.netlifydns.com"
+            },
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns03.netlifydns.com"
+            },
+            {
+              "name": "netlifyglobalcdn.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns04.netlifydns.com"
+            }
+          ],
+          "additional": [
+            {
+              "name": "ns01.netlifydns.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2607:f740:e630::1"
+            },
+            {
+              "name": "ns01.netlifydns.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "45.54.30.1"
+            },
+            {
+              "name": "ns02.netlifydns.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2607:f740:e630:4::1"
+            },
+            {
+              "name": "ns02.netlifydns.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "45.54.30.65"
+            },
+            {
+              "name": "ns03.netlifydns.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2607:f740:e630:8::1"
+            },
+            {
+              "name": "ns03.netlifydns.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "45.54.30.129"
+            },
+            {
+              "name": "ns04.netlifydns.com",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2607:f740:e630:c::1"
+            },
+            {
+              "name": "ns04.netlifydns.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "45.54.30.193"
+            }
+          ]
+        }
+      },
+      {
+        "name": "stanford.netlifyglobalcdn.com",
+        "server": "45.54.30.1",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "stanford.netlifyglobalcdn.com",
+              "ttl": 300,
+              "type": "A",
+              "value": "3.33.186.135"
+            },
+            {
+              "name": "stanford.netlifyglobalcdn.com",
+              "ttl": 300,
+              "type": "A",
+              "value": "15.197.167.90"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "www.microsoft.com",
+    "kind": "cdn",
+    "address": "23.49.206.40",
+    "path": [
+      "198.41.0.4",
+      "192.41.162.30",
+      "150.171.10.39",
+      "198.41.0.4",
+      "192.55.83.30",
+      "23.211.133.65",
+      "198.41.0.4",
+      "192.55.83.30",
+      "184.26.161.192",
+      "23.32.56.157"
+    ],
+    "reference": [
+      "23.49.206.40"
+    ],
+    "events": [
+      {
+        "name": "www.microsoft.com",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "l.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "j.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "h.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "f.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "k.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "m.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "i.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "g.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c.gtld-servers.net"
+            },
+            {
+              "name": "com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "e.gtld-servers.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.41.162.30"
+            },
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:d937::30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.48.79.30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:7094::30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.54.112.30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:8cc::30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.31.80.30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:856e::30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.33.14.30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:231d::2:30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.35.51.30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d414::30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.52.178.30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d2d::30"
+            },
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.55.83.30"
+            },
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:501:b1f9::30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.43.172.30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:39c1::30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.42.93.30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:eea3::30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.5.6.30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:a83e::2:30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.26.92.30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:83eb::30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.12.94.30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:1ca1::30"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.microsoft.com",
+        "server": "192.41.162.30",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "microsoft.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns1-39.azure-dns.com"
+            },
+            {
+              "name": "microsoft.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns2-39.azure-dns.net"
+            },
+            {
+              "name": "microsoft.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns3-39.azure-dns.org"
+            },
+            {
+              "name": "microsoft.com",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns4-39.azure-dns.info"
+            }
+          ],
+          "additional": [
+            {
+              "name": "ns1-39.azure-dns.com",
+              "ttl": 172800,
+              "type": "A",
+              "value": "150.171.10.39"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.microsoft.com",
+        "server": "150.171.10.39",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "www.microsoft.com",
+              "ttl": 3600,
+              "type": "CNAME",
+              "value": "www.microsoft.com-c-3.edgekey.net"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      },
+      {
+        "name": "www.microsoft.com-c-3.edgekey.net",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "m.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "k.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "f.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "h.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "j.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "l.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "e.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "g.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "i.gtld-servers.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.55.83.30"
+            },
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:501:b1f9::30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.52.178.30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d2d::30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.33.14.30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:231d::2:30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.35.51.30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d414::30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.31.80.30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:856e::30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.54.112.30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:8cc::30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.48.79.30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:7094::30"
+            },
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.41.162.30"
+            },
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:d937::30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.5.6.30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:a83e::2:30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.12.94.30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:1ca1::30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.26.92.30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:83eb::30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.42.93.30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:eea3::30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.43.172.30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:39c1::30"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.microsoft.com-c-3.edgekey.net",
+        "server": "192.55.83.30",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a6-65.akam.net"
+            },
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a12-65.akam.net"
+            },
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a7-64.akam.net"
+            },
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a16-65.akam.net"
+            },
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a18-65.akam.net"
+            },
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a1-66.akam.net"
+            },
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a28-65.akam.net"
+            },
+            {
+              "name": "edgekey.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a10-66.akam.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "a6-65.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "23.211.133.65"
+            },
+            {
+              "name": "a6-65.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1401:1::41"
+            },
+            {
+              "name": "a12-65.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "184.26.160.65"
+            },
+            {
+              "name": "a12-65.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1480:f000::41"
+            },
+            {
+              "name": "a7-64.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "23.61.199.64"
+            },
+            {
+              "name": "a7-64.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1406:32::40"
+            },
+            {
+              "name": "a16-65.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "23.211.132.65"
+            },
+            {
+              "name": "a16-65.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1406:1b::41"
+            },
+            {
+              "name": "a18-65.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1480:4800::41"
+            },
+            {
+              "name": "a18-65.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "95.101.36.65"
+            },
+            {
+              "name": "a1-66.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "193.108.91.66"
+            },
+            {
+              "name": "a1-66.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1401:2::42"
+            },
+            {
+              "name": "a28-65.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1480:d800::41"
+            },
+            {
+              "name": "a28-65.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "95.100.173.65"
+            },
+            {
+              "name": "a10-66.akam.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1480:d000::42"
+            },
+            {
+              "name": "a10-66.akam.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "96.7.50.66"
+            }
+          ]
+        }
+      },
+      {
+        "name": "www.microsoft.com-c-3.edgekey.net",
+        "server": "23.211.133.65",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "www.microsoft.com-c-3.edgekey.net",
+              "ttl": 900,
+              "type": "CNAME",
+              "value": "e13678.dscb.akamaiedge.net"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      },
+      {
+        "name": "e13678.dscb.akamaiedge.net",
+        "server": "198.41.0.4",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "m.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "k.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "b.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "f.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "d.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "h.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "j.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "l.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "e.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "c.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "g.gtld-servers.net"
+            },
+            {
+              "name": "net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "i.gtld-servers.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.55.83.30"
+            },
+            {
+              "name": "m.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:501:b1f9::30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.52.178.30"
+            },
+            {
+              "name": "k.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d2d::30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.33.14.30"
+            },
+            {
+              "name": "b.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:231d::2:30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.35.51.30"
+            },
+            {
+              "name": "f.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:d414::30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.31.80.30"
+            },
+            {
+              "name": "d.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:856e::30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.54.112.30"
+            },
+            {
+              "name": "h.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:8cc::30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.48.79.30"
+            },
+            {
+              "name": "j.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:7094::30"
+            },
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.41.162.30"
+            },
+            {
+              "name": "l.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:500:d937::30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.5.6.30"
+            },
+            {
+              "name": "a.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:a83e::2:30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.12.94.30"
+            },
+            {
+              "name": "e.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:502:1ca1::30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.26.92.30"
+            },
+            {
+              "name": "c.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:83eb::30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.42.93.30"
+            },
+            {
+              "name": "g.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:eea3::30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "192.43.172.30"
+            },
+            {
+              "name": "i.gtld-servers.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2001:503:39c1::30"
+            }
+          ]
+        }
+      },
+      {
+        "name": "e13678.dscb.akamaiedge.net",
+        "server": "192.55.83.30",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "la1.akamaiedge.net"
+            },
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "la3.akamaiedge.net"
+            },
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "lar2.akamaiedge.net"
+            },
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "ns3-194.akamaiedge.net"
+            },
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a12-192.akamaiedge.net"
+            },
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a28-192.akamaiedge.net"
+            },
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a6-192.akamaiedge.net"
+            },
+            {
+              "name": "akamaiedge.net",
+              "ttl": 172800,
+              "type": "NS",
+              "value": "a1-192.akamaiedge.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "la1.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "184.26.161.192"
+            },
+            {
+              "name": "la3.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "95.101.36.192"
+            },
+            {
+              "name": "lar2.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "2.16.40.192"
+            },
+            {
+              "name": "ns3-194.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "23.61.199.194"
+            },
+            {
+              "name": "ns3-194.akamaiedge.net",
+              "ttl": 172800,
+              "type": "AAAA",
+              "value": "2600:1406:32::c2"
+            },
+            {
+              "name": "a12-192.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "184.26.160.192"
+            },
+            {
+              "name": "a28-192.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "95.100.173.192"
+            },
+            {
+              "name": "a6-192.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "23.211.133.192"
+            },
+            {
+              "name": "a1-192.akamaiedge.net",
+              "ttl": 172800,
+              "type": "A",
+              "value": "193.108.88.0"
+            }
+          ]
+        }
+      },
+      {
+        "name": "e13678.dscb.akamaiedge.net",
+        "server": "184.26.161.192",
+        "response": {
+          "status": "NOERROR",
+          "aa": false,
+          "answer": [],
+          "authority": [
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n5dscb.akamaiedge.net"
+            },
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n1dscb.akamaiedge.net"
+            },
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n4dscb.akamaiedge.net"
+            },
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n2dscb.akamaiedge.net"
+            },
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n7dscb.akamaiedge.net"
+            },
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n3dscb.akamaiedge.net"
+            },
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n0dscb.akamaiedge.net"
+            },
+            {
+              "name": "dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "NS",
+              "value": "n6dscb.akamaiedge.net"
+            }
+          ],
+          "additional": [
+            {
+              "name": "n4dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "23.32.56.174"
+            },
+            {
+              "name": "n3dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "23.32.56.150"
+            },
+            {
+              "name": "n7dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "23.35.218.173"
+            },
+            {
+              "name": "n2dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "23.32.56.156"
+            },
+            {
+              "name": "n5dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "23.32.56.157"
+            },
+            {
+              "name": "n0dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "88.221.81.192"
+            },
+            {
+              "name": "n0dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "AAAA",
+              "value": "2600:1480:e800::c0"
+            },
+            {
+              "name": "n1dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "23.201.35.110"
+            },
+            {
+              "name": "n6dscb.akamaiedge.net",
+              "ttl": 4000,
+              "type": "A",
+              "value": "23.67.53.63"
+            }
+          ]
+        }
+      },
+      {
+        "name": "e13678.dscb.akamaiedge.net",
+        "server": "23.32.56.157",
+        "response": {
+          "status": "NOERROR",
+          "aa": true,
+          "answer": [
+            {
+              "name": "e13678.dscb.akamaiedge.net",
+              "ttl": 20,
+              "type": "A",
+              "value": "23.49.206.40"
+            }
+          ],
+          "authority": [],
+          "additional": []
+        }
+      }
+    ]
+  }
+]

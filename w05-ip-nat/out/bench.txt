@@ -1,0 +1,12 @@
+Command: python3 bench.py --yours
+Host: macOS, measured 2026-09-29; timings vary by run.
+
+  5,000 prefixes, 20,000 queries
+
+  baseline   build   0.00s   lookup  11.092s        1,803 lookups/s
+  yours      build   0.00s   lookup   0.006s    3,591,927 lookups/s   wrong 0
+
+   ok    every answer matches
+   lookup speedup  1992.1x
+
+   -> strong

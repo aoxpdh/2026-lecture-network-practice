@@ -16,6 +16,27 @@ exactly the thing you are supposed to understand this week.
 import argparse
 
 
+def ipv4_int(address):
+    """Convert dotted decimal to an unsigned 32-bit integer."""
+    parts = address.split(".")
+    if len(parts) != 4:
+        raise ValueError("IPv4 requires four octets")
+    result = 0
+    for part in parts:
+        if not part.isascii() or not part.isdecimal() or not 0 <= int(part) <= 255:
+            raise ValueError("invalid IPv4 octet")
+        result = (result << 8) | int(part)
+    return result
+
+
+def ipv4_text(address):
+    return ".".join(str((address >> shift) & 255) for shift in (24, 16, 8, 0))
+
+
+def prefix_mask(length):
+    return (0xFFFFFFFF << (32 - length)) & 0xFFFFFFFF
+
+
 def parse_cidr(cidr):
     """'163.152.6.0/24' -> (network as int, prefix length).
 
@@ -23,7 +44,14 @@ def parse_cidr(cidr):
     whose host bits are set when they should not be (163.152.6.5/24 is a
     common way to write a host, but it is not a network).
     """
-    raise NotImplementedError("parse a CIDR block")
+    address, length = cidr.split("/")
+    if not length.isascii() or not length.isdecimal() or not 0 <= int(length) <= 32:
+        raise ValueError("prefix length must be 0 through 32")
+    length = int(length)
+    network = ipv4_int(address)
+    if network & prefix_mask(length) != network:
+        raise ValueError("network address has host bits set")
+    return network, length
 
 
 def network_range(cidr):
@@ -32,7 +60,12 @@ def network_range(cidr):
     Careful at the edges. /31 and /32 do not have a usable host range in the
     ordinary sense - decide what you return and say so in observation.md.
     """
-    raise NotImplementedError("compute the range")
+    network, length = parse_cidr(cidr)
+    last = network | (0xFFFFFFFF ^ prefix_mask(length))
+    # /31: both endpoints usable; /32: the single host. The third value
+    # remains the numerical block end, not a directed broadcast on /31-/32.
+    first_usable, last_usable = (network, last) if length >= 31 else (network + 1, last - 1)
+    return tuple(ipv4_text(value) for value in (first_usable, last_usable, last))
 
 
 class ForwardingTable:
@@ -45,11 +78,21 @@ class ForwardingTable:
     length, the table is malformed - say what you do.
     """
 
+    def __init__(self):
+        self.entries = []
+
     def add(self, cidr, next_hop):
-        raise NotImplementedError
+        network, length = parse_cidr(cidr)
+        self.entries.append((network, length, next_hop))
 
     def lookup(self, address):
-        raise NotImplementedError
+        address = ipv4_int(address)
+        best_length, best_hop = -1, None
+        for network, length, hop in self.entries:
+            if address & prefix_mask(length) == network and length > best_length:
+                best_length, best_hop = length, hop
+        # Strict comparison keeps the first inserted route on an exact tie.
+        return best_hop
 
 
 # ------------------------------------------------------------------- harness
