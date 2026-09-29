@@ -1,7 +1,8 @@
 # Lab 3 · DNS steering report
 
-Measured networks: Network A.
-INCOMPLETE: second-network comparison remains pending.
+Privacy: network labels and precise timestamps are anonymized in the published measurement data.
+Measured networks: Network A, Network B (hotspot).
+Two or more network labels recorded; verify they represent distinct real networks.
 
 ## Rule and scope
 The naive rule flags a third party when the last two labels differ. The revised rule recognizes provider hostname suffixes and the known Wikipedia/Wikimedia ownership relationship; other cases remain uncertain. No CNAME is not proof of no CDN. Final zone below means a displayed hostname suffix, not a measured SOA zone or Public Suffix List result.
@@ -11,18 +12,18 @@ Wikipedia is a concrete false positive: wikipedia.org → wikimedia.org changes 
 ## Per-site table (latest measurement per site; system resolver chain)
 | Site | Network | Chain length (CNAME edges) | Final zone/suffix | Naive third party? | Revised verdict | Resolver address sets differ? |
 | --- | --- | --- | --- | --- | --- | --- |
-| www.microsoft.com | Network A | 2 | akamaiedge.net | True | third-party CDN (hostname evidence) | True |
-| www.netflix.com | Network A | 1 | netflix.com | False | own-domain service; course identifies own CDN | False |
-| www.adobe.com | Network A | 3 | akamaitech.net | True | third-party CDN (hostname evidence) | True |
-| www.cnn.com | Network A | 1 | fastly.net | True | third-party CDN (hostname evidence) | True |
-| www.apple.com | Network A | 3 | akamaiedge.net | True | third-party CDN (hostname evidence) | True |
-| www.korea.ac.kr | Network A | 0 | ac.kr | False | no third-party CNAME evidence; CDN status unknown | False |
-| www.stanford.edu | Network A | 1 | netlifyglobalcdn.com | True | third-party CDN (hostname evidence) | False |
-| www.bbc.co.uk | Network A | 2 | fastly.net | True | third-party CDN (hostname evidence) | True |
-| www.spotify.com | Network A | 1 | fastly.net | True | third-party CDN (hostname evidence) | True |
-| www.github.com | Network A | 1 | github.com | False | no third-party CNAME evidence; CDN status unknown | True |
-| www.wikipedia.org | Network A | 1 | wikimedia.org | True | same operator: Wikimedia | False |
-| www.nytimes.com | Network A | 3 | fastly.net | True | third-party CDN (hostname evidence) | True |
+| www.microsoft.com | Network B (hotspot) | 2 | akamaiedge.net | True | third-party CDN (hostname evidence) | True |
+| www.netflix.com | Network B (hotspot) | 1 | netflix.com | False | own-domain service; course identifies own CDN | False |
+| www.adobe.com | Network B (hotspot) | 2 | akamai.net | True | third-party CDN (hostname evidence) | True |
+| www.cnn.com | Network B (hotspot) | 1 | fastly.net | True | third-party CDN (hostname evidence) | True |
+| www.apple.com | Network B (hotspot) | 3 | akamaiedge.net | True | third-party CDN (hostname evidence) | True |
+| www.korea.ac.kr | Network B (hotspot) | 0 | ac.kr | False | no third-party CNAME evidence; CDN status unknown | False |
+| www.stanford.edu | Network B (hotspot) | 1 | netlifyglobalcdn.com | True | third-party CDN (hostname evidence) | False |
+| www.bbc.co.uk | Network B (hotspot) | 2 | fastly.net | True | third-party CDN (hostname evidence) | True |
+| www.spotify.com | Network B (hotspot) | 1 | fastly.net | True | third-party CDN (hostname evidence) | True |
+| www.github.com | Network B (hotspot) | 1 | github.com | False | no third-party CNAME evidence; CDN status unknown | True |
+| www.wikipedia.org | Network B (hotspot) | 1 | wikimedia.org | True | same operator: Wikimedia | False |
+| www.nytimes.com | Network B (hotspot) | 3 | fastly.net | True | third-party CDN (hostname evidence) | True |
 
 ## Resolver steering counts
 Latest per-site measurements: 8 of 12 sites returned different IPv4 sets across resolvers. In the explicitly identified third-party CDN subset: **7 of 8**.
@@ -32,6 +33,25 @@ Resolvers: system, Google 8.8.8.8, Quad9 9.9.9.9. Public resolver names/IPs do n
 ## Raw measurement evidence
 Every collected CNAME hop, A-address set, parsed response, network label and timestamp is preserved in chains.json; collection appends measurements rather than replacing them.
 Fastly documents map.fastly.net in its [routing documentation](https://www.fastly.com/documentation/guides/concepts/routing-traffic-to-fastly/). Other provider suffix classifications are hostname-based evidence, not an independent IP-ownership audit.
+
+Across all recorded networks/resolvers: 7 of 8 provider-signature CDN sites differed (includes temporal variation).
+
+## Same-resolver comparison between first and last networks
+| Site | First network | Last network | Resolvers with changed A sets |
+| --- | --- | --- | --- |
+| www.microsoft.com | Network A | Network B (hotspot) | google, quad9 |
+| www.netflix.com | Network A | Network B (hotspot) | none |
+| www.adobe.com | Network A | Network B (hotspot) | system, google, quad9 |
+| www.cnn.com | Network A | Network B (hotspot) | none |
+| www.apple.com | Network A | Network B (hotspot) | google, quad9 |
+| www.korea.ac.kr | Network A | Network B (hotspot) | none |
+| www.stanford.edu | Network A | Network B (hotspot) | none |
+| www.bbc.co.uk | Network A | Network B (hotspot) | none |
+| www.spotify.com | Network A | Network B (hotspot) | none |
+| www.github.com | Network A | Network B (hotspot) | none |
+| www.wikipedia.org | Network A | Network B (hotspot) | none |
+| www.nytimes.com | Network A | Network B (hotspot) | none |
+Among the provider-signature CDN subset, 3/8 changed across networks with at least one resolver held fixed. Time and cache state still differ, so this is not proof of geographic proximity.
 
 ## Part A · Official trace alternative, with a remaining coverage gap
 

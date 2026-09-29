@@ -175,6 +175,7 @@ def report():
     networks = sorted({m["network"] for r in records for m in r["measurements"]})
     lines = [
         "# Lab 3 · DNS steering report", "",
+        "Privacy: network labels and precise timestamps are anonymized in the published measurement data.",
         "Measured networks: " + ", ".join(networks) + ".",
         "INCOMPLETE: second-network comparison remains pending." if len(networks) < 2
         else "Two or more network labels recorded; verify they represent distinct real networks.",
@@ -245,6 +246,26 @@ def report():
         pool = [values for values in all_cdn_sets.values() if len(values) >= 2]
         lines += ["", f"Across all recorded networks/resolvers: {sum(len(set(v)) > 1 for v in pool)} "
                   f"of {len(pool)} provider-signature CDN sites differed (includes temporal variation)."]
+        lines += ["", "## Same-resolver comparison between first and last networks",
+                  "| Site | First network | Last network | Resolvers with changed A sets |",
+                  "| --- | --- | --- | --- |"]
+        compared = network_changed = 0
+        for record in records:
+            first, last = record["measurements"][0], record["measurements"][-1]
+            if first["network"] == last["network"]:
+                continue
+            changed_resolvers = [key for key in RESOLVERS
+                if not first["resolvers"][key].get("error")
+                and not last["resolvers"][key].get("error")
+                and first["resolvers"][key]["addresses"] != last["resolvers"][key]["addresses"]]
+            if classify(record["site"], last["resolvers"]["system"]["chain"])[1]:
+                compared += 1
+                network_changed += bool(changed_resolvers)
+            lines.append(f"| {record['site']} | {first['network']} | {last['network']} | "
+                         f"{', '.join(changed_resolvers) or 'none'} |")
+        lines += [f"Among the provider-signature CDN subset, {network_changed}/{compared} "
+                  "changed across networks with at least one resolver held fixed. "
+                  "Time and cache state still differ, so this is not proof of geographic proximity."]
     capture = os.path.join(OUT, "capture-analysis.md")
     if os.path.exists(capture):
         lines += ["", open(capture).read()]
