@@ -1,6 +1,8 @@
 # Lab 5 · Address study
 
-Status: INCOMPLETE — a second real network measurement and comparison are still required.
+Status: both real networks measured; DHCP uses the explicitly permitted official-trace path B.
+
+Privacy: address prefixes and public IPs are masked in this published copy; arithmetic and code verification used the original measured values. Masked strings are illustrative redactions, not executable IPv4 inputs. See SUBMISSION.md.
 
 ## Part A · Network A (2026-09-29)
 
@@ -30,9 +32,25 @@ The mask fixes the first 24 bits and leaves 8 host bits: 2^8 = 256 total address
 
 To distinguish one versus two NATs, inspect the first router's WAN address and upstream translation configuration: a private/shared WAN address plus a further upstream NAT is evidence of an additional stage. Traceroute alone is not a reliable NAT counter. A 100.64.0.0/10 address indicates shared address space associated with CGN, not by itself proof of exactly two NAT stages.
 
-## Part B · Second network — pending
+## Part B · Network B (hotspot) and comparison
 
-Only one network has been measured. After the user connects this Mac to a hotspot or another real network, collect the second record, derive its range, check its gateway, and compare private IP, mask, gateway and public IP. No second label or fabricated measurement has been added.
+The test host switched to the hotspot on 2026-09-29. The changed interface address, gateway and externally observed IPv4 confirm a different network path.
+
+| Item | Network A (before hotspot) | Network B (hotspot) |
+| --- | --- | --- |
+| Interface IPv4 | 172.16.[masked].109 | 10.[masked].[masked].113 |
+| Mask | 255.255.255.0 (/24) | 255.255.255.0 (/24) |
+| Network | 172.16.[masked].0/24 | 10.[masked].[masked].0/24 |
+| Usable range | 172.16.[masked].1–172.16.[masked].254 | 10.[masked].[masked].1–10.[masked].[masked].254 |
+| Broadcast | 172.16.[masked].255 | 10.[masked].[masked].255 |
+| Gateway | 172.16.[masked].1 | 10.[masked].[masked].85 |
+| External IPv4 | [public-IP-A] | [public-IP-B] |
+
+Manual hotspot calculation: /24 fixes the first three octets; 113 AND 0 = 0 in the host octet gives 10.[masked].[masked].0, and setting all eight host bits gives .255. Excluding the two endpoints gives .1–.254 and 254 usable hosts. Task 1's network_range returns the same first, last and broadcast. Gateway 10.[masked].[masked].85 is on-link within that range.
+
+The private address and gateway changed because the second access network assigns a different local subnet and router. The mask stayed /24 because both networks use 256-address blocks. The public address changed with the Internet egress. Both local addresses are RFC 1918 private addresses, and neither equals the corresponding external IPv4, consistent with at least one translation stage for direct IPv4 access. The number of stages cannot be established without the phone/router's upstream configuration; no exact double-NAT count is claimed.
+
+The hotspot also advertises NAT64 prefix 64:ff9b::/96 and IPv6 on en0. This indicates IPv6/IPv4 translation capability; it does not by itself prove that this IPv4 measurement used NAT64 or reveal a NAT stage count.
 
 ## Part C · Official DHCP trace (path B)
 
