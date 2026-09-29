@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Network A",
+    "local": {
+      "os": "Darwin",
+      "ifconfig": "en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\n\tinet 172.16.[masked].109 netmask 0xffffff00 broadcast 172.16.[masked].255\n",
+      "route": "   route to: default\ndestination: default\n       mask: default\n    gateway: 172.16.[masked].1\n  interface: en0\n"
+    },
+    "public": "[public-IP-A]",
+    "collection_note": "Collected on the actual Mac with task2_myaddr.py on 2026-09-29. Relevant raw output excerpts retained; unrelated interfaces, MAC/IPv6 addresses and DNS metadata omitted for publication. Network label anonymized."
+  },
+  {
+    "label": "Network B (hotspot)",
+    "local": {
+      "os": "Darwin",
+      "ifconfig": "en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\n\tinet 10.[masked].[masked].113 netmask 0xffffff00 broadcast 10.[masked].[masked].255\n\tnat64 prefix 64:ff9b:: prefixlen 96\n",
+      "route": "   route to: default\ndestination: default\n       mask: default\n    gateway: 10.[masked].[masked].85\n  interface: en0\n"
+    },
+    "public": "[public-IP-B]",
+    "collection_note": "Collected with task2_myaddr.py after switching to the hotspot on 2026-09-29. Relevant raw output excerpts retained; unrelated interfaces, MAC/IPv6 addresses and DNS metadata omitted. Unabridged output is local and uncommitted."
+  }
+]
