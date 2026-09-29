@@ -22,6 +22,7 @@ address each time; the harness compares the *set of authoritative nameservers*
 you ended at for those, not the address.
 """
 import argparse, subprocess, sys
+from dns_transport import normalize, query
 
 # Root servers. Everything starts here; there is no earlier step.
 ROOT_SERVERS = [
@@ -70,9 +71,75 @@ class Resolver:
         dig @198.41.0.4 www.korea.ac.kr +norecurse
     """
 
+    def __init__(self, transport=query, max_depth=24, max_queries=100):
+        self.transport = transport
+        self.max_depth, self.max_queries = max_depth, max_queries
+
     def resolve(self, name):
-        raise NotImplementedError(
-            "Implement the iterative walk: root -> TLD -> authoritative")
+        self.path, self.events, self.visited = [], [], set()
+        address = self._walk(normalize(name), ROOT_SERVERS, 0, set())
+        return address, self.path
+
+    def _walk(self, name, servers, depth, active):
+        if depth >= self.max_depth or len(self.path) >= self.max_queries:
+            raise RuntimeError("DNS walk depth/query limit reached")
+        errors = []
+        for server in servers:
+            if (name, server) in self.visited:
+                continue
+            if len(self.path) >= self.max_queries:
+                raise RuntimeError("DNS query budget exhausted")
+            self.visited.add((name, server))
+            self.path.append(server)
+            event = {"name": name, "server": server}
+            self.events.append(event)
+            try:
+                response = self.transport(name, server=server, recursive=False)
+                event["response"] = response
+                if response["status"] != "NOERROR":
+                    raise RuntimeError(response["status"])
+                if response["aa"]:
+                    for rr in response["answer"]:
+                        if rr["name"] == name and rr["type"] == "A":
+                            return rr["value"]
+                    for rr in response["answer"]:
+                        if rr["name"] == name and rr["type"] == "CNAME":
+                            target = rr["value"]
+                            if target in active | {name}:
+                                raise RuntimeError("CNAME loop")
+                            return self._walk(target, ROOT_SERVERS, depth + 1, active | {name})
+                referrals = [rr for rr in response["authority"] if rr["type"] == "NS"
+                             and (name == rr["name"] or name.endswith("." + rr["name"]))]
+                if not referrals:
+                    raise RuntimeError("no authoritative A/CNAME or delegation")
+                zone = max((rr["name"] for rr in referrals), key=len)
+                names = list(dict.fromkeys(rr["value"] for rr in referrals if rr["name"] == zone))
+                # Use only additional A records naming the referred NS.
+                # Root referrals include cross-TLD glue (e.g. com -> *.net).
+                # This educational resolver does not implement DNSSEC validation.
+                glued = {}
+                for rr in response["additional"]:
+                    if rr["type"] == "A" and rr["name"] in names:
+                        glued.setdefault(rr["name"], []).append(rr["value"])
+                addresses = [ip for ns in names for ip in glued.get(ns, [])]
+                if addresses:
+                    try:
+                        return self._walk(name, addresses, depth + 1, active)
+                    except RuntimeError as exc:
+                        errors.append(str(exc))
+                for ns in names:
+                    if ns in glued or ns in active | {name}:
+                        continue
+                    try:
+                        ip = self._walk(ns, ROOT_SERVERS, depth + 1, active | {name})
+                        return self._walk(name, [ip], depth + 1, active)
+                    except RuntimeError as exc:
+                        errors.append(str(exc))
+                raise RuntimeError("delegated servers exhausted")
+            except (RuntimeError, subprocess.TimeoutExpired, OSError) as exc:
+                event["error"] = str(exc)
+                errors.append(str(exc))
+        raise RuntimeError(f"resolution failed for {name}: " + "; ".join(errors[-3:]))
 
 
 # ------------------------------------------------------------------- harness

@@ -74,9 +74,10 @@ def test_task2():
                             "-e", "dns.flags.response"],
                            capture_output=True, text=True)
         rows = [l for l in r.stdout.splitlines() if l.strip()]
-        q = sum(1 for l in rows if l.strip() == "0")
-        a = sum(1 for l in rows if l.strip() == "1")
-        if q and a:
+        # tshark versions emit either numeric or textual booleans.
+        q = sum(1 for l in rows if l.strip().lower() in ("0", "false"))
+        a = sum(1 for l in rows if l.strip().lower() in ("1", "true"))
+        if r.returncode == 0 and q and a:
             record(2, "capture has queries and responses", PASS, f"{q} queries, {a} responses")
         else:
             record(2, "capture has queries and responses", FAIL,

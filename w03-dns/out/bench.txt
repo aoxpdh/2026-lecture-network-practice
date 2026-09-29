@@ -1,0 +1,34 @@
+Command: python3 bench.py --yours
+
+  1000 queries over 60 simulated minutes, 20 ms per upstream round trip
+
+  baseline   upstream   325   hit rate  67.5%   stale  266   sim time    6.5s
+  yours      upstream   275   hit rate  72.5%   stale    0   sim time    5.5s
+
+  0 stale, upstream +15% vs baseline  ->  good
+  For 'strong': in observation.md, work out the smallest number of
+  upstream queries any correct cache could make here, and why.
+
+Command: python3 cache_floor.py
+www.cnn.com: 76
+www.microsoft.com: 118
+dns.google: 1
+www.netflix.com: 37
+www.wikipedia.org: 6
+www.spotify.com: 23
+www.korea.ac.kr: 1
+a.root-servers.net: 1
+www.stanford.edu: 1
+www.github.com: 11
+minimum upstream queries: 275
+
+Floor argument:
+Assume an initially empty cache, the supplied per-name upstream interface,
+fixed fixture TTLs, and no use of an expired answer or advance knowledge of values.
+For each name, the first uncovered request forces a fetch. That fetch covers
+requests only until its expiration. At the first request at or after expiration,
+another fetch is mandatory. Fetching earlier only moves expiration earlier and
+cannot cover a later request that this greedy schedule could not cover.
+Summing these per-name mandatory TTL intervals gives 275. Retaining fresh
+entries without eviction attains the bound. Fewer requests would require stale
+reuse, preloaded knowledge, or a different upstream interface.

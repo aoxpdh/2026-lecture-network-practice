@@ -1,0 +1,3401 @@
+[
+  {
+    "site": "www.microsoft.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.microsoft.com",
+              "www.microsoft.com-c-3.edgekey.net",
+              "e13678.dscb.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.49.206.40"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.microsoft.com",
+                    "ttl": 373,
+                    "type": "CNAME",
+                    "value": "www.microsoft.com-c-3.edgekey.net"
+                  },
+                  {
+                    "name": "www.microsoft.com-c-3.edgekey.net",
+                    "ttl": 608,
+                    "type": "CNAME",
+                    "value": "e13678.dscb.akamaiedge.net"
+                  },
+                  {
+                    "name": "e13678.dscb.akamaiedge.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.49.206.40"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.microsoft.com",
+              "www.microsoft.com-c-3.edgekey.net",
+              "e13678.dscb.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.35.101.225"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.microsoft.com",
+                    "ttl": 319,
+                    "type": "CNAME",
+                    "value": "www.microsoft.com-c-3.edgekey.net"
+                  },
+                  {
+                    "name": "www.microsoft.com-c-3.edgekey.net",
+                    "ttl": 271,
+                    "type": "CNAME",
+                    "value": "e13678.dscb.akamaiedge.net"
+                  },
+                  {
+                    "name": "e13678.dscb.akamaiedge.net",
+                    "ttl": 18,
+                    "type": "A",
+                    "value": "23.35.101.225"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.microsoft.com",
+              "www.microsoft.com-c-3.edgekey.net",
+              "e13678.dscb.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.35.101.225"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.microsoft.com",
+                    "ttl": 943,
+                    "type": "CNAME",
+                    "value": "www.microsoft.com-c-3.edgekey.net"
+                  },
+                  {
+                    "name": "www.microsoft.com-c-3.edgekey.net",
+                    "ttl": 326,
+                    "type": "CNAME",
+                    "value": "e13678.dscb.akamaiedge.net"
+                  },
+                  {
+                    "name": "e13678.dscb.akamaiedge.net",
+                    "ttl": 17,
+                    "type": "A",
+                    "value": "23.35.101.225"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.microsoft.com",
+              "www.microsoft.com-c-3.edgekey.net",
+              "e13678.dscb.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.49.206.40"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.microsoft.com",
+                    "ttl": 1193,
+                    "type": "CNAME",
+                    "value": "www.microsoft.com-c-3.edgekey.net"
+                  },
+                  {
+                    "name": "www.microsoft.com-c-3.edgekey.net",
+                    "ttl": 255,
+                    "type": "CNAME",
+                    "value": "e13678.dscb.akamaiedge.net"
+                  },
+                  {
+                    "name": "e13678.dscb.akamaiedge.net",
+                    "ttl": 14,
+                    "type": "A",
+                    "value": "23.49.206.40"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.microsoft.com",
+              "www.microsoft.com-c-3.edgekey.net",
+              "e13678.dscb.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.49.206.40"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.microsoft.com",
+                    "ttl": 2205,
+                    "type": "CNAME",
+                    "value": "www.microsoft.com-c-3.edgekey.net"
+                  },
+                  {
+                    "name": "www.microsoft.com-c-3.edgekey.net",
+                    "ttl": 21,
+                    "type": "CNAME",
+                    "value": "e13678.dscb.akamaiedge.net"
+                  },
+                  {
+                    "name": "e13678.dscb.akamaiedge.net",
+                    "ttl": 20,
+                    "type": "A",
+                    "value": "23.49.206.40"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.microsoft.com",
+              "www.microsoft.com-c-3.edgekey.net",
+              "e13678.dscb.akamaiedge.net"
+            ],
+            "addresses": [
+              "2.17.169.207"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.microsoft.com",
+                    "ttl": 662,
+                    "type": "CNAME",
+                    "value": "www.microsoft.com-c-3.edgekey.net"
+                  },
+                  {
+                    "name": "www.microsoft.com-c-3.edgekey.net",
+                    "ttl": 754,
+                    "type": "CNAME",
+                    "value": "e13678.dscb.akamaiedge.net"
+                  },
+                  {
+                    "name": "e13678.dscb.akamaiedge.net",
+                    "ttl": 19,
+                    "type": "A",
+                    "value": "2.17.169.207"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.netflix.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.netflix.com",
+              "www.prod.ftl.netflix.com"
+            ],
+            "addresses": [
+              "207.45.72.1",
+              "207.45.73.1"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.netflix.com",
+                    "ttl": 11,
+                    "type": "CNAME",
+                    "value": "www.prod.ftl.netflix.com"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 23,
+                    "type": "A",
+                    "value": "207.45.73.1"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 23,
+                    "type": "A",
+                    "value": "207.45.72.1"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.netflix.com",
+              "www.prod.ftl.netflix.com"
+            ],
+            "addresses": [
+              "207.45.72.1",
+              "207.45.73.1"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.netflix.com",
+                    "ttl": 54,
+                    "type": "CNAME",
+                    "value": "www.prod.ftl.netflix.com"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 6,
+                    "type": "A",
+                    "value": "207.45.73.1"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 6,
+                    "type": "A",
+                    "value": "207.45.72.1"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.netflix.com",
+              "www.prod.ftl.netflix.com"
+            ],
+            "addresses": [
+              "207.45.72.1",
+              "207.45.73.1"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.netflix.com",
+                    "ttl": 60,
+                    "type": "CNAME",
+                    "value": "www.prod.ftl.netflix.com"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "207.45.73.1"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "207.45.72.1"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.netflix.com",
+              "www.prod.ftl.netflix.com"
+            ],
+            "addresses": [
+              "207.45.72.1",
+              "207.45.73.1"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.netflix.com",
+                    "ttl": 29,
+                    "type": "CNAME",
+                    "value": "www.prod.ftl.netflix.com"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 38,
+                    "type": "A",
+                    "value": "207.45.72.1"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 38,
+                    "type": "A",
+                    "value": "207.45.73.1"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.netflix.com",
+              "www.prod.ftl.netflix.com"
+            ],
+            "addresses": [
+              "207.45.72.1",
+              "207.45.73.1"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.netflix.com",
+                    "ttl": 22,
+                    "type": "CNAME",
+                    "value": "www.prod.ftl.netflix.com"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 22,
+                    "type": "A",
+                    "value": "207.45.73.1"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 22,
+                    "type": "A",
+                    "value": "207.45.72.1"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.netflix.com",
+              "www.prod.ftl.netflix.com"
+            ],
+            "addresses": [
+              "207.45.72.1",
+              "207.45.73.1"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.netflix.com",
+                    "ttl": 3,
+                    "type": "CNAME",
+                    "value": "www.prod.ftl.netflix.com"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "207.45.72.1"
+                  },
+                  {
+                    "name": "www.prod.ftl.netflix.com",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "207.45.73.1"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.adobe.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.adobe.com",
+              "www.adobe.com.edgesuite.net",
+              "a1319.dscr.akamai.net",
+              "a1319.dscr.akamai.net.0.1.cn.akamaitech.net"
+            ],
+            "addresses": [
+              "23.35.218.146",
+              "23.35.218.149",
+              "23.76.153.106",
+              "23.76.153.11",
+              "23.76.153.168",
+              "23.76.153.18",
+              "23.76.153.25",
+              "23.76.153.27",
+              "23.76.153.91"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.adobe.com",
+                    "ttl": 262,
+                    "type": "CNAME",
+                    "value": "www.adobe.com.edgesuite.net"
+                  },
+                  {
+                    "name": "www.adobe.com.edgesuite.net",
+                    "ttl": 17858,
+                    "type": "CNAME",
+                    "value": "a1319.dscr.akamai.net"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 16,
+                    "type": "CNAME",
+                    "value": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.76.153.91"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.76.153.18"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.35.218.146"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.35.218.149"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.76.153.25"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.76.153.106"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.76.153.11"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.76.153.27"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net.0.1.cn.akamaitech.net",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "23.76.153.168"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.adobe.com",
+              "www.adobe.com.edgesuite.net",
+              "a1319.dscr.akamai.net"
+            ],
+            "addresses": [
+              "23.76.153.115",
+              "23.76.153.121"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.adobe.com",
+                    "ttl": 81,
+                    "type": "CNAME",
+                    "value": "www.adobe.com.edgesuite.net"
+                  },
+                  {
+                    "name": "www.adobe.com.edgesuite.net",
+                    "ttl": 14009,
+                    "type": "CNAME",
+                    "value": "a1319.dscr.akamai.net"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 20,
+                    "type": "A",
+                    "value": "23.76.153.115"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 20,
+                    "type": "A",
+                    "value": "23.76.153.121"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.adobe.com",
+              "www.adobe.com.edgesuite.net",
+              "a1319.dscr.akamai.net"
+            ],
+            "addresses": [
+              "23.215.106.160",
+              "23.215.106.161"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.adobe.com",
+                    "ttl": 117,
+                    "type": "CNAME",
+                    "value": "www.adobe.com.edgesuite.net"
+                  },
+                  {
+                    "name": "www.adobe.com.edgesuite.net",
+                    "ttl": 12078,
+                    "type": "CNAME",
+                    "value": "a1319.dscr.akamai.net"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 1,
+                    "type": "A",
+                    "value": "23.215.106.161"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 1,
+                    "type": "A",
+                    "value": "23.215.106.160"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.adobe.com",
+              "www.adobe.com.edgesuite.net",
+              "a1319.dscr.akamai.net"
+            ],
+            "addresses": [
+              "23.32.4.74",
+              "23.32.4.75",
+              "23.32.4.83",
+              "23.32.4.88",
+              "23.32.4.90",
+              "23.32.4.91",
+              "23.32.4.96",
+              "23.32.4.97",
+              "23.32.4.98"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.adobe.com",
+                    "ttl": 205,
+                    "type": "CNAME",
+                    "value": "www.adobe.com.edgesuite.net"
+                  },
+                  {
+                    "name": "www.adobe.com.edgesuite.net",
+                    "ttl": 5653,
+                    "type": "CNAME",
+                    "value": "a1319.dscr.akamai.net"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.98"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.74"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.75"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.83"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.91"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.88"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.90"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.96"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "23.32.4.97"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.adobe.com",
+              "www.adobe.com.edgesuite.net",
+              "a1319.dscr.akamai.net"
+            ],
+            "addresses": [
+              "23.32.56.16",
+              "23.32.56.9"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.adobe.com",
+                    "ttl": 291,
+                    "type": "CNAME",
+                    "value": "www.adobe.com.edgesuite.net"
+                  },
+                  {
+                    "name": "www.adobe.com.edgesuite.net",
+                    "ttl": 21584,
+                    "type": "CNAME",
+                    "value": "a1319.dscr.akamai.net"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 20,
+                    "type": "A",
+                    "value": "23.32.56.16"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 20,
+                    "type": "A",
+                    "value": "23.32.56.9"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.adobe.com",
+              "www.adobe.com.edgesuite.net",
+              "a1319.dscr.akamai.net"
+            ],
+            "addresses": [
+              "23.208.31.135",
+              "23.208.31.177"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.adobe.com",
+                    "ttl": 226,
+                    "type": "CNAME",
+                    "value": "www.adobe.com.edgesuite.net"
+                  },
+                  {
+                    "name": "www.adobe.com.edgesuite.net",
+                    "ttl": 11637,
+                    "type": "CNAME",
+                    "value": "a1319.dscr.akamai.net"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 1,
+                    "type": "A",
+                    "value": "23.208.31.177"
+                  },
+                  {
+                    "name": "a1319.dscr.akamai.net",
+                    "ttl": 1,
+                    "type": "A",
+                    "value": "23.208.31.135"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.cnn.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.cnn.com",
+              "cnn-tls.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.51.5"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.cnn.com",
+                    "ttl": 54,
+                    "type": "CNAME",
+                    "value": "cnn-tls.map.fastly.net"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 16,
+                    "type": "A",
+                    "value": "146.75.51.5"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.cnn.com",
+              "cnn-tls.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.5",
+              "151.101.195.5",
+              "151.101.3.5",
+              "151.101.67.5"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.cnn.com",
+                    "ttl": 248,
+                    "type": "CNAME",
+                    "value": "cnn-tls.map.fastly.net"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 14,
+                    "type": "A",
+                    "value": "151.101.195.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 14,
+                    "type": "A",
+                    "value": "151.101.131.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 14,
+                    "type": "A",
+                    "value": "151.101.67.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 14,
+                    "type": "A",
+                    "value": "151.101.3.5"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.cnn.com",
+              "cnn-tls.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.5",
+              "151.101.195.5",
+              "151.101.3.5",
+              "151.101.67.5"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.cnn.com",
+                    "ttl": 2,
+                    "type": "CNAME",
+                    "value": "cnn-tls.map.fastly.net"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.195.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.3.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.67.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.131.5"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.cnn.com",
+              "cnn-tls.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.51.5"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.cnn.com",
+                    "ttl": 251,
+                    "type": "CNAME",
+                    "value": "cnn-tls.map.fastly.net"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 6,
+                    "type": "A",
+                    "value": "146.75.51.5"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.cnn.com",
+              "cnn-tls.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.5",
+              "151.101.195.5",
+              "151.101.3.5",
+              "151.101.67.5"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.cnn.com",
+                    "ttl": 111,
+                    "type": "CNAME",
+                    "value": "cnn-tls.map.fastly.net"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 36,
+                    "type": "A",
+                    "value": "151.101.195.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 36,
+                    "type": "A",
+                    "value": "151.101.67.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 36,
+                    "type": "A",
+                    "value": "151.101.131.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 36,
+                    "type": "A",
+                    "value": "151.101.3.5"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.cnn.com",
+              "cnn-tls.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.5",
+              "151.101.195.5",
+              "151.101.3.5",
+              "151.101.67.5"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.cnn.com",
+                    "ttl": 93,
+                    "type": "CNAME",
+                    "value": "cnn-tls.map.fastly.net"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.3.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.195.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.67.5"
+                  },
+                  {
+                    "name": "cnn-tls.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.131.5"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.apple.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.apple.com",
+              "www-apple-com.v.aaplimg.com",
+              "www.apple.com.edgekey.net",
+              "e6858.dsce9.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.49.205.28"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.apple.com",
+                    "ttl": 212,
+                    "type": "CNAME",
+                    "value": "www-apple-com.v.aaplimg.com"
+                  },
+                  {
+                    "name": "www-apple-com.v.aaplimg.com",
+                    "ttl": 220,
+                    "type": "CNAME",
+                    "value": "www.apple.com.edgekey.net"
+                  },
+                  {
+                    "name": "www.apple.com.edgekey.net",
+                    "ttl": 225,
+                    "type": "CNAME",
+                    "value": "e6858.dsce9.akamaiedge.net"
+                  },
+                  {
+                    "name": "e6858.dsce9.akamaiedge.net",
+                    "ttl": 17,
+                    "type": "A",
+                    "value": "23.49.205.28"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.apple.com",
+              "www-apple-com.v.aaplimg.com",
+              "www.apple.com.edgekey.net",
+              "e6858.dsce9.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.49.205.28"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.apple.com",
+                    "ttl": 279,
+                    "type": "CNAME",
+                    "value": "www-apple-com.v.aaplimg.com"
+                  },
+                  {
+                    "name": "www-apple-com.v.aaplimg.com",
+                    "ttl": 300,
+                    "type": "CNAME",
+                    "value": "www.apple.com.edgekey.net"
+                  },
+                  {
+                    "name": "www.apple.com.edgekey.net",
+                    "ttl": 167,
+                    "type": "CNAME",
+                    "value": "e6858.dsce9.akamaiedge.net"
+                  },
+                  {
+                    "name": "e6858.dsce9.akamaiedge.net",
+                    "ttl": 20,
+                    "type": "A",
+                    "value": "23.49.205.28"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.apple.com",
+              "www-apple-com.v.aaplimg.com",
+              "www.apple.com.edgekey.net",
+              "e6858.dsce9.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.63.77.47"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.apple.com",
+                    "ttl": 239,
+                    "type": "CNAME",
+                    "value": "www-apple-com.v.aaplimg.com"
+                  },
+                  {
+                    "name": "www-apple-com.v.aaplimg.com",
+                    "ttl": 239,
+                    "type": "CNAME",
+                    "value": "www.apple.com.edgekey.net"
+                  },
+                  {
+                    "name": "www.apple.com.edgekey.net",
+                    "ttl": 184,
+                    "type": "CNAME",
+                    "value": "e6858.dsce9.akamaiedge.net"
+                  },
+                  {
+                    "name": "e6858.dsce9.akamaiedge.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "23.63.77.47"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.apple.com",
+              "www-apple-com.v.aaplimg.com",
+              "www.apple.com.edgekey.net",
+              "e6858.dsce9.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.49.205.28"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.apple.com",
+                    "ttl": 140,
+                    "type": "CNAME",
+                    "value": "www-apple-com.v.aaplimg.com"
+                  },
+                  {
+                    "name": "www-apple-com.v.aaplimg.com",
+                    "ttl": 137,
+                    "type": "CNAME",
+                    "value": "www.apple.com.edgekey.net"
+                  },
+                  {
+                    "name": "www.apple.com.edgekey.net",
+                    "ttl": 141,
+                    "type": "CNAME",
+                    "value": "e6858.dsce9.akamaiedge.net"
+                  },
+                  {
+                    "name": "e6858.dsce9.akamaiedge.net",
+                    "ttl": 8,
+                    "type": "A",
+                    "value": "23.49.205.28"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.apple.com",
+              "www-apple-com.v.aaplimg.com",
+              "www.apple.com.edgekey.net",
+              "e6858.dsce9.akamaiedge.net"
+            ],
+            "addresses": [
+              "184.28.183.49"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.apple.com",
+                    "ttl": 150,
+                    "type": "CNAME",
+                    "value": "www-apple-com.v.aaplimg.com"
+                  },
+                  {
+                    "name": "www-apple-com.v.aaplimg.com",
+                    "ttl": 102,
+                    "type": "CNAME",
+                    "value": "www.apple.com.edgekey.net"
+                  },
+                  {
+                    "name": "www.apple.com.edgekey.net",
+                    "ttl": 102,
+                    "type": "CNAME",
+                    "value": "e6858.dsce9.akamaiedge.net"
+                  },
+                  {
+                    "name": "e6858.dsce9.akamaiedge.net",
+                    "ttl": 10,
+                    "type": "A",
+                    "value": "184.28.183.49"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.apple.com",
+              "www-apple-com.v.aaplimg.com",
+              "www.apple.com.edgekey.net",
+              "e6858.dsce9.akamaiedge.net"
+            ],
+            "addresses": [
+              "23.217.69.53"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.apple.com",
+                    "ttl": 123,
+                    "type": "CNAME",
+                    "value": "www-apple-com.v.aaplimg.com"
+                  },
+                  {
+                    "name": "www-apple-com.v.aaplimg.com",
+                    "ttl": 95,
+                    "type": "CNAME",
+                    "value": "www.apple.com.edgekey.net"
+                  },
+                  {
+                    "name": "www.apple.com.edgekey.net",
+                    "ttl": 237,
+                    "type": "CNAME",
+                    "value": "e6858.dsce9.akamaiedge.net"
+                  },
+                  {
+                    "name": "e6858.dsce9.akamaiedge.net",
+                    "ttl": 16,
+                    "type": "A",
+                    "value": "23.217.69.53"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.korea.ac.kr",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.korea.ac.kr"
+            ],
+            "addresses": [
+              "163.152.6.10"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.korea.ac.kr",
+                    "ttl": 2812,
+                    "type": "A",
+                    "value": "163.152.6.10"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.korea.ac.kr"
+            ],
+            "addresses": [
+              "163.152.6.10"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.korea.ac.kr",
+                    "ttl": 1252,
+                    "type": "A",
+                    "value": "163.152.6.10"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.korea.ac.kr"
+            ],
+            "addresses": [
+              "163.152.6.10"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.korea.ac.kr",
+                    "ttl": 3600,
+                    "type": "A",
+                    "value": "163.152.6.10"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.korea.ac.kr"
+            ],
+            "addresses": [
+              "163.152.6.10"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.korea.ac.kr",
+                    "ttl": 1563,
+                    "type": "A",
+                    "value": "163.152.6.10"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.korea.ac.kr"
+            ],
+            "addresses": [
+              "163.152.6.10"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.korea.ac.kr",
+                    "ttl": 1045,
+                    "type": "A",
+                    "value": "163.152.6.10"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.korea.ac.kr"
+            ],
+            "addresses": [
+              "163.152.6.10"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.korea.ac.kr",
+                    "ttl": 387,
+                    "type": "A",
+                    "value": "163.152.6.10"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.stanford.edu",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.stanford.edu",
+              "stanford.netlifyglobalcdn.com"
+            ],
+            "addresses": [
+              "15.197.167.90",
+              "3.33.186.135"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.stanford.edu",
+                    "ttl": 545,
+                    "type": "CNAME",
+                    "value": "stanford.netlifyglobalcdn.com"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 277,
+                    "type": "A",
+                    "value": "3.33.186.135"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 277,
+                    "type": "A",
+                    "value": "15.197.167.90"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.stanford.edu",
+              "stanford.netlifyglobalcdn.com"
+            ],
+            "addresses": [
+              "15.197.167.90",
+              "3.33.186.135"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.stanford.edu",
+                    "ttl": 1457,
+                    "type": "CNAME",
+                    "value": "stanford.netlifyglobalcdn.com"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 263,
+                    "type": "A",
+                    "value": "15.197.167.90"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 263,
+                    "type": "A",
+                    "value": "3.33.186.135"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.stanford.edu",
+              "stanford.netlifyglobalcdn.com"
+            ],
+            "addresses": [
+              "15.197.167.90",
+              "3.33.186.135"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.stanford.edu",
+                    "ttl": 1647,
+                    "type": "CNAME",
+                    "value": "stanford.netlifyglobalcdn.com"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 147,
+                    "type": "A",
+                    "value": "15.197.167.90"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 147,
+                    "type": "A",
+                    "value": "3.33.186.135"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.stanford.edu",
+              "stanford.netlifyglobalcdn.com"
+            ],
+            "addresses": [
+              "15.197.167.90",
+              "3.33.186.135"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.stanford.edu",
+                    "ttl": 1800,
+                    "type": "CNAME",
+                    "value": "stanford.netlifyglobalcdn.com"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 300,
+                    "type": "A",
+                    "value": "15.197.167.90"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 300,
+                    "type": "A",
+                    "value": "3.33.186.135"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.stanford.edu",
+              "stanford.netlifyglobalcdn.com"
+            ],
+            "addresses": [
+              "15.197.167.90",
+              "3.33.186.135"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.stanford.edu",
+                    "ttl": 1069,
+                    "type": "CNAME",
+                    "value": "stanford.netlifyglobalcdn.com"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 300,
+                    "type": "A",
+                    "value": "3.33.186.135"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 300,
+                    "type": "A",
+                    "value": "15.197.167.90"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.stanford.edu",
+              "stanford.netlifyglobalcdn.com"
+            ],
+            "addresses": [
+              "15.197.167.90",
+              "3.33.186.135"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.stanford.edu",
+                    "ttl": 1800,
+                    "type": "CNAME",
+                    "value": "stanford.netlifyglobalcdn.com"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 300,
+                    "type": "A",
+                    "value": "3.33.186.135"
+                  },
+                  {
+                    "name": "stanford.netlifyglobalcdn.com",
+                    "ttl": 300,
+                    "type": "A",
+                    "value": "15.197.167.90"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.bbc.co.uk",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.bbc.co.uk",
+              "www.bbc.co.uk.pri.bbc.co.uk",
+              "bbc.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.48.81"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.bbc.co.uk",
+                    "ttl": 16578,
+                    "type": "CNAME",
+                    "value": "www.bbc.co.uk.pri.bbc.co.uk"
+                  },
+                  {
+                    "name": "www.bbc.co.uk.pri.bbc.co.uk",
+                    "ttl": 300,
+                    "type": "CNAME",
+                    "value": "bbc.map.fastly.net"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "146.75.48.81"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.bbc.co.uk",
+              "www.bbc.co.uk.pri.bbc.co.uk",
+              "bbc.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.0.81",
+              "151.101.128.81",
+              "151.101.192.81",
+              "151.101.64.81"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.bbc.co.uk",
+                    "ttl": 20630,
+                    "type": "CNAME",
+                    "value": "www.bbc.co.uk.pri.bbc.co.uk"
+                  },
+                  {
+                    "name": "www.bbc.co.uk.pri.bbc.co.uk",
+                    "ttl": 300,
+                    "type": "CNAME",
+                    "value": "bbc.map.fastly.net"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 6,
+                    "type": "A",
+                    "value": "151.101.128.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 6,
+                    "type": "A",
+                    "value": "151.101.192.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 6,
+                    "type": "A",
+                    "value": "151.101.64.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 6,
+                    "type": "A",
+                    "value": "151.101.0.81"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.bbc.co.uk",
+              "www.bbc.co.uk.pri.bbc.co.uk",
+              "bbc.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.0.81",
+              "151.101.128.81",
+              "151.101.192.81",
+              "151.101.64.81"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.bbc.co.uk",
+                    "ttl": 12890,
+                    "type": "CNAME",
+                    "value": "www.bbc.co.uk.pri.bbc.co.uk"
+                  },
+                  {
+                    "name": "www.bbc.co.uk.pri.bbc.co.uk",
+                    "ttl": 109,
+                    "type": "CNAME",
+                    "value": "bbc.map.fastly.net"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.0.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.64.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.128.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.192.81"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.bbc.co.uk",
+              "www.bbc.co.uk.pri.bbc.co.uk",
+              "bbc.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.48.81"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.bbc.co.uk",
+                    "ttl": 2124,
+                    "type": "CNAME",
+                    "value": "www.bbc.co.uk.pri.bbc.co.uk"
+                  },
+                  {
+                    "name": "www.bbc.co.uk.pri.bbc.co.uk",
+                    "ttl": 300,
+                    "type": "CNAME",
+                    "value": "bbc.map.fastly.net"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "146.75.48.81"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.bbc.co.uk",
+              "www.bbc.co.uk.pri.bbc.co.uk",
+              "bbc.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.0.81",
+              "151.101.128.81",
+              "151.101.192.81",
+              "151.101.64.81"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.bbc.co.uk",
+                    "ttl": 21184,
+                    "type": "CNAME",
+                    "value": "www.bbc.co.uk.pri.bbc.co.uk"
+                  },
+                  {
+                    "name": "www.bbc.co.uk.pri.bbc.co.uk",
+                    "ttl": 300,
+                    "type": "CNAME",
+                    "value": "bbc.map.fastly.net"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "151.101.0.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "151.101.64.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "151.101.192.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 11,
+                    "type": "A",
+                    "value": "151.101.128.81"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.bbc.co.uk",
+              "www.bbc.co.uk.pri.bbc.co.uk",
+              "bbc.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.0.81",
+              "151.101.128.81",
+              "151.101.192.81",
+              "151.101.64.81"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.bbc.co.uk",
+                    "ttl": 12683,
+                    "type": "CNAME",
+                    "value": "www.bbc.co.uk.pri.bbc.co.uk"
+                  },
+                  {
+                    "name": "www.bbc.co.uk.pri.bbc.co.uk",
+                    "ttl": 300,
+                    "type": "CNAME",
+                    "value": "bbc.map.fastly.net"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.128.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.192.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.0.81"
+                  },
+                  {
+                    "name": "bbc.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "151.101.64.81"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.spotify.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.spotify.com",
+              "atc.spotify.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.51.42"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.spotify.com",
+                    "ttl": 52,
+                    "type": "CNAME",
+                    "value": "atc.spotify.map.fastly.net"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 3,
+                    "type": "A",
+                    "value": "146.75.51.42"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.spotify.com",
+              "atc.spotify.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.42",
+              "151.101.195.42",
+              "151.101.3.42",
+              "151.101.67.42"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.spotify.com",
+                    "ttl": 264,
+                    "type": "CNAME",
+                    "value": "atc.spotify.map.fastly.net"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 24,
+                    "type": "A",
+                    "value": "151.101.3.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 24,
+                    "type": "A",
+                    "value": "151.101.67.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 24,
+                    "type": "A",
+                    "value": "151.101.195.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 24,
+                    "type": "A",
+                    "value": "151.101.131.42"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.spotify.com",
+              "atc.spotify.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.42",
+              "151.101.195.42",
+              "151.101.3.42",
+              "151.101.67.42"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.spotify.com",
+                    "ttl": 229,
+                    "type": "CNAME",
+                    "value": "atc.spotify.map.fastly.net"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 56,
+                    "type": "A",
+                    "value": "151.101.195.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 56,
+                    "type": "A",
+                    "value": "151.101.67.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 56,
+                    "type": "A",
+                    "value": "151.101.3.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 56,
+                    "type": "A",
+                    "value": "151.101.131.42"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.spotify.com",
+              "atc.spotify.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.51.42"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.spotify.com",
+                    "ttl": 300,
+                    "type": "CNAME",
+                    "value": "atc.spotify.map.fastly.net"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 1,
+                    "type": "A",
+                    "value": "146.75.51.42"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.spotify.com",
+              "atc.spotify.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.42",
+              "151.101.195.42",
+              "151.101.3.42",
+              "151.101.67.42"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.spotify.com",
+                    "ttl": 204,
+                    "type": "CNAME",
+                    "value": "atc.spotify.map.fastly.net"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 46,
+                    "type": "A",
+                    "value": "151.101.195.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 46,
+                    "type": "A",
+                    "value": "151.101.131.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 46,
+                    "type": "A",
+                    "value": "151.101.67.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 46,
+                    "type": "A",
+                    "value": "151.101.3.42"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.spotify.com",
+              "atc.spotify.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.131.42",
+              "151.101.195.42",
+              "151.101.3.42",
+              "151.101.67.42"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.spotify.com",
+                    "ttl": 148,
+                    "type": "CNAME",
+                    "value": "atc.spotify.map.fastly.net"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 26,
+                    "type": "A",
+                    "value": "151.101.3.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 26,
+                    "type": "A",
+                    "value": "151.101.67.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 26,
+                    "type": "A",
+                    "value": "151.101.131.42"
+                  },
+                  {
+                    "name": "atc.spotify.map.fastly.net",
+                    "ttl": 26,
+                    "type": "A",
+                    "value": "151.101.195.42"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.github.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.github.com",
+              "github.com"
+            ],
+            "addresses": [
+              "20.200.245.247"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.github.com",
+                    "ttl": 631,
+                    "type": "CNAME",
+                    "value": "github.com"
+                  },
+                  {
+                    "name": "github.com",
+                    "ttl": 58,
+                    "type": "A",
+                    "value": "20.200.245.247"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.github.com",
+              "github.com"
+            ],
+            "addresses": [
+              "20.200.245.247"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.github.com",
+                    "ttl": 1428,
+                    "type": "CNAME",
+                    "value": "github.com"
+                  },
+                  {
+                    "name": "github.com",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "20.200.245.247"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.github.com",
+              "github.com"
+            ],
+            "addresses": [
+              "20.27.177.113"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.github.com",
+                    "ttl": 389,
+                    "type": "CNAME",
+                    "value": "github.com"
+                  },
+                  {
+                    "name": "github.com",
+                    "ttl": 12,
+                    "type": "A",
+                    "value": "20.27.177.113"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.github.com",
+              "github.com"
+            ],
+            "addresses": [
+              "20.200.245.247"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.github.com",
+                    "ttl": 1000,
+                    "type": "CNAME",
+                    "value": "github.com"
+                  },
+                  {
+                    "name": "github.com",
+                    "ttl": 32,
+                    "type": "A",
+                    "value": "20.200.245.247"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.github.com",
+              "github.com"
+            ],
+            "addresses": [
+              "20.200.245.247"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.github.com",
+                    "ttl": 2965,
+                    "type": "CNAME",
+                    "value": "github.com"
+                  },
+                  {
+                    "name": "github.com",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "20.200.245.247"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.github.com",
+              "github.com"
+            ],
+            "addresses": [
+              "20.27.177.113"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.github.com",
+                    "ttl": 3339,
+                    "type": "CNAME",
+                    "value": "github.com"
+                  },
+                  {
+                    "name": "github.com",
+                    "ttl": 13,
+                    "type": "A",
+                    "value": "20.27.177.113"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.wikipedia.org",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.wikipedia.org",
+              "dyna.wikimedia.org"
+            ],
+            "addresses": [
+              "103.102.166.224"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.wikipedia.org",
+                    "ttl": 83296,
+                    "type": "CNAME",
+                    "value": "dyna.wikimedia.org"
+                  },
+                  {
+                    "name": "dyna.wikimedia.org",
+                    "ttl": 28,
+                    "type": "A",
+                    "value": "103.102.166.224"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.wikipedia.org",
+              "dyna.wikimedia.org"
+            ],
+            "addresses": [
+              "103.102.166.224"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.wikipedia.org",
+                    "ttl": 10936,
+                    "type": "CNAME",
+                    "value": "dyna.wikimedia.org"
+                  },
+                  {
+                    "name": "dyna.wikimedia.org",
+                    "ttl": 180,
+                    "type": "A",
+                    "value": "103.102.166.224"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.wikipedia.org",
+              "dyna.wikimedia.org"
+            ],
+            "addresses": [
+              "103.102.166.224"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.wikipedia.org",
+                    "ttl": 19641,
+                    "type": "CNAME",
+                    "value": "dyna.wikimedia.org"
+                  },
+                  {
+                    "name": "dyna.wikimedia.org",
+                    "ttl": 39,
+                    "type": "A",
+                    "value": "103.102.166.224"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.wikipedia.org",
+              "dyna.wikimedia.org"
+            ],
+            "addresses": [
+              "103.102.166.224"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.wikipedia.org",
+                    "ttl": 7364,
+                    "type": "CNAME",
+                    "value": "dyna.wikimedia.org"
+                  },
+                  {
+                    "name": "dyna.wikimedia.org",
+                    "ttl": 111,
+                    "type": "A",
+                    "value": "103.102.166.224"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.wikipedia.org",
+              "dyna.wikimedia.org"
+            ],
+            "addresses": [
+              "103.102.166.224"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.wikipedia.org",
+                    "ttl": 3617,
+                    "type": "CNAME",
+                    "value": "dyna.wikimedia.org"
+                  },
+                  {
+                    "name": "dyna.wikimedia.org",
+                    "ttl": 180,
+                    "type": "A",
+                    "value": "103.102.166.224"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.wikipedia.org",
+              "dyna.wikimedia.org"
+            ],
+            "addresses": [
+              "103.102.166.224"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.wikipedia.org",
+                    "ttl": 19506,
+                    "type": "CNAME",
+                    "value": "dyna.wikimedia.org"
+                  },
+                  {
+                    "name": "dyna.wikimedia.org",
+                    "ttl": 164,
+                    "type": "A",
+                    "value": "103.102.166.224"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "site": "www.nytimes.com",
+    "measurements": [
+      {
+        "network": "Network A",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.nytimes.com",
+              "www.prd.map.nytimes.com",
+              "www.prd.map.nytimes.xovr.nyt.net",
+              "nytimes.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.49.164"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.nytimes.com",
+                    "ttl": 77,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.com"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.com",
+                    "ttl": 477,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.xovr.nyt.net"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.xovr.nyt.net",
+                    "ttl": 87,
+                    "type": "CNAME",
+                    "value": "nytimes.map.fastly.net"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 58,
+                    "type": "A",
+                    "value": "146.75.49.164"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.nytimes.com",
+              "www.prd.map.nytimes.com",
+              "www.prd.map.nytimes.xovr.nyt.net",
+              "nytimes.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.1.164",
+              "151.101.129.164",
+              "151.101.193.164",
+              "151.101.65.164"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.nytimes.com",
+                    "ttl": 431,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.com"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.com",
+                    "ttl": 241,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.xovr.nyt.net"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.xovr.nyt.net",
+                    "ttl": 495,
+                    "type": "CNAME",
+                    "value": "nytimes.map.fastly.net"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 34,
+                    "type": "A",
+                    "value": "151.101.65.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 34,
+                    "type": "A",
+                    "value": "151.101.129.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 34,
+                    "type": "A",
+                    "value": "151.101.193.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 34,
+                    "type": "A",
+                    "value": "151.101.1.164"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.nytimes.com",
+              "www.prd.map.nytimes.com",
+              "www.prd.map.nytimes.xovr.nyt.net",
+              "nytimes.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.1.164",
+              "151.101.129.164",
+              "151.101.193.164",
+              "151.101.65.164"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.nytimes.com",
+                    "ttl": 494,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.com"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.com",
+                    "ttl": 494,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.xovr.nyt.net"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.xovr.nyt.net",
+                    "ttl": 494,
+                    "type": "CNAME",
+                    "value": "nytimes.map.fastly.net"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.193.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.129.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.65.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.1.164"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "network": "Network B (hotspot)",
+        "when": "[timestamp redacted]",
+        "resolvers": {
+          "system": {
+            "resolver": "system",
+            "server": null,
+            "chain": [
+              "www.nytimes.com",
+              "www.prd.map.nytimes.com",
+              "www.prd.map.nytimes.xovr.nyt.net",
+              "nytimes.map.fastly.net"
+            ],
+            "addresses": [
+              "146.75.49.164"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.nytimes.com",
+                    "ttl": 74,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.com"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.com",
+                    "ttl": 74,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.xovr.nyt.net"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.xovr.nyt.net",
+                    "ttl": 74,
+                    "type": "CNAME",
+                    "value": "nytimes.map.fastly.net"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 60,
+                    "type": "A",
+                    "value": "146.75.49.164"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "google": {
+            "resolver": "google",
+            "server": "8.8.8.8",
+            "chain": [
+              "www.nytimes.com",
+              "www.prd.map.nytimes.com",
+              "www.prd.map.nytimes.xovr.nyt.net",
+              "nytimes.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.1.164",
+              "151.101.129.164",
+              "151.101.193.164",
+              "151.101.65.164"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.nytimes.com",
+                    "ttl": 327,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.com"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.com",
+                    "ttl": 536,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.xovr.nyt.net"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.xovr.nyt.net",
+                    "ttl": 362,
+                    "type": "CNAME",
+                    "value": "nytimes.map.fastly.net"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 29,
+                    "type": "A",
+                    "value": "151.101.193.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 29,
+                    "type": "A",
+                    "value": "151.101.1.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 29,
+                    "type": "A",
+                    "value": "151.101.129.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 29,
+                    "type": "A",
+                    "value": "151.101.65.164"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          },
+          "quad9": {
+            "resolver": "quad9",
+            "server": "9.9.9.9",
+            "chain": [
+              "www.nytimes.com",
+              "www.prd.map.nytimes.com",
+              "www.prd.map.nytimes.xovr.nyt.net",
+              "nytimes.map.fastly.net"
+            ],
+            "addresses": [
+              "151.101.1.164",
+              "151.101.129.164",
+              "151.101.193.164",
+              "151.101.65.164"
+            ],
+            "responses": [
+              {
+                "status": "NOERROR",
+                "aa": false,
+                "answer": [
+                  {
+                    "name": "www.nytimes.com",
+                    "ttl": 63,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.com"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.com",
+                    "ttl": 63,
+                    "type": "CNAME",
+                    "value": "www.prd.map.nytimes.xovr.nyt.net"
+                  },
+                  {
+                    "name": "www.prd.map.nytimes.xovr.nyt.net",
+                    "ttl": 63,
+                    "type": "CNAME",
+                    "value": "nytimes.map.fastly.net"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.129.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.193.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.1.164"
+                  },
+                  {
+                    "name": "nytimes.map.fastly.net",
+                    "ttl": 15,
+                    "type": "A",
+                    "value": "151.101.65.164"
+                  }
+                ],
+                "authority": [],
+                "additional": []
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]
