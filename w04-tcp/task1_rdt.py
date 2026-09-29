@@ -68,25 +68,51 @@ class Sender:
     """
 
     def __init__(self, data_channel, ack_channel, data):
-        raise NotImplementedError("write your sender")
+        self.up, self.down = data_channel, ack_channel
+        self.chunks = [data[i:i + PAYLOAD] for i in range(0, len(data), PAYLOAD)]
+        self.sequence = 0
+        self.clock = 0
+        self.last_sent = None
+        self.timeout = 8
 
     def step(self):
         """Do one unit of work. Return False when you believe you are done."""
-        raise NotImplementedError
+        self.clock += 1
+        ack = self.down.receive()
+        if ack is not None and ack == self.sequence and self.last_sent is not None:
+            self.sequence += 1
+            self.last_sent = None
+        if self.sequence == len(self.chunks):
+            return False
+        if self.last_sent is None or self.clock - self.last_sent >= self.timeout:
+            self.up.send((self.sequence, self.chunks[self.sequence]))
+            self.last_sent = self.clock
+        return True
 
 
 class Receiver:
     """Your receiver. Hands back the reassembled bytes via `.data()`."""
 
     def __init__(self, data_channel, ack_channel):
-        raise NotImplementedError("write your receiver")
+        self.up, self.down = data_channel, ack_channel
+        self.expected = 0
+        self.output = bytearray()
 
     def step(self):
-        raise NotImplementedError
+        packet = self.up.receive()
+        if packet is None:
+            return
+        sequence, payload = packet
+        if sequence == self.expected:
+            self.output.extend(payload)
+            self.expected += 1
+        # Re-ACK old data after ACK loss, but never append it twice.
+        if sequence < self.expected:
+            self.down.send(sequence)
 
     def data(self):
         """The bytes reassembled so far."""
-        raise NotImplementedError
+        return bytes(self.output)
 
 
 # ------------------------------------------------------------------- harness
