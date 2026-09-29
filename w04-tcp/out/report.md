@@ -1,6 +1,8 @@
 # Lab 4 · Measurement report
 
-Status: INCOMPLETE — the second network measurement is pending.
+Status: both real networks measured (five transfers each); handshake analysis uses the permitted official-trace path B.
+
+Privacy: network identifiers and precise measurement times are redacted in the published copy. Throughput and timing durations are unchanged.
 
 ## Part A · Official TCP trace (path B)
 
@@ -43,7 +45,21 @@ Throughput here is payload bits divided by total curl time, including DNS/connec
 
 The spread may reflect Wi-Fi contention, route/server load, queueing, and connection startup; these five end-to-end runs alone cannot identify the contribution of each. A larger RTT delays ACK feedback and slow-start growth, and reduces the approximate cwnd/RTT rate for a fixed congestion window. That can hurt short-transfer throughput even at equal physical capacity, but other changes can dominate; a strict per-run monotonic relationship is not expected.
 
-Second network: pending. No second label, comparison median, or claimed change has been fabricated. Once the Mac is connected to a hotspot, repeat the same five transfers and compare throughput spread and connection timing.
+## Network B (hotspot) comparison
+
+After switching networks, the interface used en0 address 10.[masked].[masked].113 with gateway 10.[masked].[masked].85 and external IPv4 [public-IP-B]. The same target, payload size and measurement script were used on 2026-09-29 during the recorded measurement session.
+
+| Metric | First network | Network B (hotspot) |
+| --- | --- | --- |
+| Runs | 5 | 5 |
+| Mbps samples | 77.55, 77.44, 155.70, 174.89, 47.52 | 38.04, 41.98, 41.18, 40.78, 23.35 |
+| Median Mbps | 77.55 | 40.78 |
+| Min–max Mbps | 47.52–174.89 | 23.35–41.98 |
+| Absolute spread Mbps | 127.38 | 18.63 |
+| Relative spread (max−min)/median | 164.3% | 45.7% |
+| Median TCP connect estimate | 17.636 ms | 33.191 ms |
+
+The hotspot's median throughput was about 47.4% lower and connect time about 1.88× longer. That is consistent with slower ACK feedback/slow-start growth contributing to lower short-transfer throughput, but mobile radio, queueing, server selection, and the elapsed time also differ; it does not isolate RTT as the sole cause. The fifth hotspot sample was lower than the first four, demonstrating within-network variation too. DNS collection ran concurrently with the start of this small-transfer experiment; its traffic was low but is another uncontrolled factor. These are end-to-end observations, not a controlled capacity benchmark.
 
 ## Attribution
 
