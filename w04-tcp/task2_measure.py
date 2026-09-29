@@ -28,11 +28,15 @@ def one_run():
     """One transfer. Returns (seconds, bytes, curl's own timing breakdown)."""
     fmt = "%{time_namelookup} %{time_connect} %{time_starttransfer} %{time_total} %{size_download}"
     r = subprocess.run(
-        ["curl", "-s", "-o", os.devnull, "-w", fmt, TARGET],
+        ["curl", "--fail", "--silent", "--show-error", "--http1.1",
+         "--connect-timeout", "10", "--max-time", "60",
+         "-o", os.devnull, "-w", fmt, TARGET],
         capture_output=True, text=True)
     if r.returncode != 0 or not r.stdout.strip():
         raise RuntimeError(f"curl failed: {r.stderr.strip() or r.returncode}")
     dns, conn, first, total, size = (float(x) for x in r.stdout.split())
+    if int(size) != 5_000_000:
+        raise RuntimeError(f"expected 5,000,000 bytes, received {int(size)}")
     return {
         "dns_s": dns,
         "connect_s": conn - dns,        # this is your TCP handshake
