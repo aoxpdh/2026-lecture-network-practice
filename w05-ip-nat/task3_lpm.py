@@ -55,10 +55,22 @@ class YourTable:
     """
 
     def __init__(self):
-        raise NotImplementedError("write your table")
+        self.by_length = {}
+        self.search_order = []
 
     def add(self, network, prefix_len, next_hop):
-        raise NotImplementedError
+        if prefix_len not in self.by_length:
+            self.by_length[prefix_len] = {}
+            self.search_order = [
+                ((0xFFFFFFFF << (32 - length)) & 0xFFFFFFFF, self.by_length[length])
+                for length in sorted(self.by_length, reverse=True)
+            ]
+        # LinearTable retains the first route when identical prefixes tie.
+        self.by_length[prefix_len].setdefault(network, next_hop)
 
     def lookup(self, address):
-        raise NotImplementedError
+        for mask, routes in self.search_order:
+            network = address & mask
+            if network in routes:
+                return routes[network]
+        return None

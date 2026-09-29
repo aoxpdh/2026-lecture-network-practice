@@ -1,7 +1,9 @@
 """Additional boundary checks; the supplied grading harness is unchanged."""
 import unittest
+import random
 
 from task1_forward import ForwardingTable, network_range, parse_cidr
+from task3_lpm import LinearTable, YourTable
 
 
 class SubnetTests(unittest.TestCase):
@@ -29,6 +31,22 @@ class SubnetTests(unittest.TestCase):
         self.assertEqual(table.lookup("203.0.113.1"), "default")
         table.add("192.0.2.1/32", "host")
         self.assertEqual(table.lookup("192.0.2.1"), "host")
+
+
+class FastTableTests(unittest.TestCase):
+    def test_all_lengths_ties_and_incremental_add(self):
+        slow, fast = LinearTable(), YourTable()
+        self.assertIsNone(fast.lookup(0))
+        rng = random.Random(5)
+        for length in range(33):
+            mask = (0xFFFFFFFF << (32 - length)) & 0xFFFFFFFF
+            network = rng.getrandbits(32) & mask
+            for hop in (None if length == 32 else str(length), "duplicate"):
+                slow.add(network, length, hop)
+                fast.add(network, length, hop)
+            for address in [network, network | (0xFFFFFFFF ^ mask),
+                            *[rng.getrandbits(32) for _ in range(100)]]:
+                self.assertEqual(fast.lookup(address), slow.lookup(address))
 
 
 if __name__ == "__main__":
