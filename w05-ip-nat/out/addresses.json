@@ -1,0 +1,12 @@
+[
+  {
+    "label": "Network A",
+    "local": {
+      "os": "Darwin",
+      "ifconfig": "en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\n\tinet 172.16.[masked].109 netmask 0xffffff00 broadcast 172.16.[masked].255\n",
+      "route": "   route to: default\ndestination: default\n       mask: default\n    gateway: 172.16.[masked].1\n  interface: en0\n"
+    },
+    "public": "[public-IP-A]",
+    "collection_note": "Collected on the actual Mac with task2_myaddr.py on 2026-09-29. Relevant raw output excerpts retained; unrelated interfaces, MAC/IPv6 addresses and DNS metadata omitted for publication. Network label anonymized."
+  }
+]
