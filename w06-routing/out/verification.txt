@@ -26,3 +26,15 @@ bash -n scenario.sh / git diff --check
 Limits
   Format tests do not grade observation quality or establish the unidentified
   campus exit/ocean crossing. FIB timing does not measure packet-loss duration.
+
+Pre-publication review (2026-10-06)
+  Reviewed six unpublished Lab 6 commits: 31 paths, 46 distinct file versions.
+  Filename/identifier checks found no credential-related entries, personal
+  absolute paths, email addresses, MAC addresses, binary captures or env files.
+  Commit authors/committers all use GitHub noreply addresses.
+  Three private-address classification warnings were the same special-use
+  transit hop, not RFC1918 personal addresses. Personal traceroute subnets
+  remain masked; public transit/target and synthetic Docker lab IPs are retained.
+  This is a scoped review, not a guarantee from a dedicated secret scanner.
+  Re-ran both assignment checks: 9 passed, 0 failed, 1 human-graded skip;
+  format check passed. No unrelated files were added.
