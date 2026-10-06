@@ -1,7 +1,7 @@
 # Week 06 진행 상태
 
-Task 1과 Task 3은 구현·검증 완료. Task 2 Part A는 인터넷 변경 전 A를 traceroute.txt, 변경 후 B를 traceroute-network-b.txt에 저장했다. OSPF 실험이 남아 아직 제출 가능한 상태가 아니다.
-결과를 얻지 않은 route-before.txt, route-after.txt, reconverge.txt는 생성하지 않았다.
+Task 1·3 구현과 Task 2 실측을 완료했다. Part A는 인터넷 변경 전 A를 traceroute.txt, 변경 후 B를 traceroute-network-b.txt에 저장했다. Part B·C는 본인의 Docker FRR 라우터에서 실험했으며 필수 파일과 추가 원시 관측치를 저장했다.
+자동 검사는 통과했다. 다만 국내 경로의 캠퍼스 이탈과 해외 해저 구간·케이블은 관측으로 확인되지 않았으며 자동 검사 통과가 이 증거 부족을 해소하는 것은 아니다.
 
 ## 구현과 검증
 
@@ -12,10 +12,12 @@ Task 1과 Task 3은 구현·검증 완료. Task 2 Part A는 인터넷 변경 전
 - python3 -m unittest test_routing_edges: 3개 테스트 통과. 단절, 복구, 동률 및 20 seeds × 300 events를 기준 구현과 비교했다.
 - 공식 벤치마크: 1,000개 이벤트 모두 일치, SPF 363/1,001회, good.
 - bench.txt의 추가 시간 비교는 동일 그래프·이벤트에 bench.run의 check=False를 양쪽 모두 적용했다.
+- python3 test_tasks.py: 9 passed, 0 failed, 1 skipped (관찰 기록의 사람 평가).
+- python3 ../check.py w06: Format check passed.
 
-## Task 2 재개 조건과 측정 주의점
+## Task 2 실측
 
-사용자의 외부 접근 허용 및 실측 지시에 따라 2026-10-06 현재 네트워크에서 세 대상의 traceroute를 실행했다. Docker 27.4.0은 앞선 점검에서 응답했으며 FRR 이미지는 당시 로컬 목록에 없었다. OSPF 실험에는 FRR 이미지 준비가 필요하다.
+2026-10-06 두 인터넷 연결의 traceroute와 Docker 27.4.0/FRR 9.1.0의 OSPF 실험을 수행했다. 기존 frrouting/frr:v9.1.0은 manifest not found로 실패하여 [공식 FRR 9.1 릴리스](https://frrouting.org/release/9.1/)의 quay.io/frrouting/frr:9.1.0으로 수정했다. 실행 아키텍처는 arm64, 이미지 digest는 sha256:f310c2ebb3827fa03b9674ee05e70a7d5eef2123bcc3b475eb2ef14dafcb52b4이다.
 과거 제출과 같이 개인 주소·기기 정보는 공개본에서 마스킹하고 실습 대상 주소와 측정치는 유지한다.
 
 ### 네트워크 A 실측 (인터넷 변경 전)
@@ -42,17 +44,40 @@ Stanford의 목적지 IP는 두 연결 모두 3.33.186.135였다. B에서는 ICM
 1.1.1.1의 UDP 홉 수는 4개 늘고 마지막 RTT는 이번 표본에서 22.865ms 늘었다. 홉별 경로와 첫 홉 변화는 관측했지만 각 TTL당 한 번이고 여러 traceroute를 병행했으므로 평균 품질, 혼잡의 원인, replica 위치나 변경 여부는 단정하지 않는다.
 공개본에서 사설 주소의 일부를 마스킹했으므로 마스킹 문자열이 같은 홉이 반드시 같은 라우터라는 뜻은 아니다.
 
-### OSPF 실험 재개 시 주의점
+### OSPF: 토폴로지와 학습 경로
 
-제공 scenario.sh를 그대로 사용하면 다음 측정 문제가 있다.
+각 라우터에 loopback 10.255.0.1/32, .2/32, .3/32를 추가했다. 모두 OSPF area 0에 광고하며 baseline의 transit 비용은 10, loopback 비용은 0이다. 동적으로 할당된 Docker 주소와 인터페이스를 실제 조회하여 매핑했다. 아래 주소는 개인정보가 아닌 실험용 컨테이너 주소다.
 
-- cut은 r1만 저장하므로 세 라우터 모두의 수렴된 표를 별도로 수집해야 한다.
-- show ip route ospf의 문자열 전체 비교는 경로 age 변화도 감지한다. prefix, next hop, interface, metric 등 실제 경로 필드로 수렴 여부를 확인해야 한다.
-- eth0/eth1이 주석의 네트워크와 일치하는지 실제 주소와 Docker 네트워크 연결을 확인해야 한다.
-- ip link set down은 로컬 장애 알림을 주므로 dead interval만큼 기다리는 무응답 장애와 구별해야 한다. 필요하면 hello 손실 실험을 별도로 측정한다.
-- 설정 파일에는 hello/dead interval이 명시되어 있지 않다. 실행 중 show ip ospf interface에서 실제 값을 확인해야 한다.
-- restore와 cost는 시간을 기록하지 않으므로 단절·복구·비용 변경을 각각 monotonic clock과 명시적인 기대 경로로 측정해야 한다.
-- 비용 변경은 링크가 유지된 상태에서 before/after 경로를 저장해야 한다.
-- compose up은 r1 r2 r3를 명시해 공통 lab 서비스가 함께 빌드되지 않도록 한다.
+| 링크 | 한쪽 | 다른 쪽 |
+| --- | --- | --- |
+| r1–r2 | r1 eth1, 192.168.96.3 | r2 eth0, 192.168.96.2 |
+| r1–r3 | r1 eth0, 192.168.80.3 | r3 eth0, 192.168.80.2 |
+| r2–r3 | r2 eth1, 192.168.112.2 | r3 eth1, 192.168.112.3 |
+
+각 라우터는 상대 두 대의 loopback을 OSPF 비용 10으로 학습했다. 또한 직접 붙어 있지 않은 반대편 서브넷(r1: 192.168.112.0/20, r2: 192.168.80.0/20, r3: 192.168.96.0/20)을 비용 20으로 학습했다. route-before.txt의 O>* 및 ECMP next hop이 증거다.
+
+### OSPF: 시간 측정 결과
+
+| 사건 | 최초 기대 FIB 관측 | 두 번째 일치 확인 | 관측 경로 변화 |
+| --- | ---: | ---: | --- |
+| r1–r2의 r1 interface down | 0.219722s | 0.863155s | r1→r2, r2→r1 모두 r3 경유, 비용 10→20 |
+| interface up 복구 | 12.726508s | 13.385706s | 위 두 경로가 직접 next hop, 비용 10으로 복귀 |
+| r1→r3 비용 10→100 | 0.278886s | 0.946538s | r1→r3 loopback이 r2 경유, 비용 20으로 변경 |
+| r1–r2 양쪽 egress 100% drop | 30.815260s | 31.454923s | carrier up 상태에서 r3 경유로 우회 |
+| drop 제거 복구 | 14.141683s | 14.778129s | 직접 next hop, 비용 10으로 복귀 |
+
+설정 파일에는 타이머가 명시되지 않았으므로 실제 show ip ospf interface에서 Hello=10s, Dead=40s, Wait=40s를 확인했다. 무응답 장애는 마지막 hello를 받은 뒤 40초가 지나야 감지하므로 장애 주입 순간부터는 대략 30–40초가 남을 수 있다. 30.815초는 이에 부합한다. 반면 로컬 interface down은 즉시 감지되고 LSA로 전달되어 40초를 기다리지 않았다.
+복구는 hello, 양방향 인접 관계 형성과 database 교환, LSA/SPF를 거쳐 12.727/14.142초가 걸렸다. down의 원인 감지 과정과 달라 대칭이 아니다. 개별 프로토콜 단계별 시간을 분리해서 측정한 것은 아니다.
+비용 변경 시 두 링크와 인접 관계가 유지된 채 경로가 이동했다(route-cost-before.txt, route-cost-after.txt). dead timer 대기 없이 LSA/SPF가 진행되어 무응답 장애보다 빨랐지만, 로컬 down의 0.220초보다 빠르지는 않았다. 이 정도 작은 차이는 Docker 및 polling overhead도 포함하므로 성능 우열로 일반화하지 않는다.
+
+### 측정 방법, 증거와 재현
+
+measure_ospf.py는 Python monotonic clock을 변경 명령 직전에 시작하고 세 라우터의 OSPF JSON을 병행 조회한다. 경로 age 문자열을 비교하지 않고 여섯 원격 loopback의 selected/FIB, metric, next hop과 interface를 확인한다. 0.5초 polling에 Docker 명령 overhead가 추가되며 연속 두 번 기대 경로가 나타나야 성공한다. 최초 일치값은 이 여섯 경로에 대한 관측 상한이지 전체 LSDB의 완전한 수렴이나 패킷 손실 지속 시간의 정밀 측정이 아니다. 세 조회는 원자적인 동시 snapshot도 아니다.
+
+route-before.txt와 route-after.txt에 세 라우터의 표·이웃·실제 타이머를 저장했다. 복구와 비용 변경, 무응답 장애도 각각 별도 route-*.txt에 저장했고 reconverge.txt가 시간을 요약한다. ospf-measurements.json에는 매 polling의 경로와 elapsed time 및 기대값이 있다. 각 사건은 단일 trial이며 평균·분산은 추정하지 않는다.
+
+무응답 장애는 이 실험 컨테이너의 r1–r2 양쪽 인터페이스에 tc netem loss 100%를 적용했다. 실험 종료 시 qdisc를 제거하고 interface up과 비용 10을 복원했다. 개인 인터넷 연결이나 다른 컨테이너에는 장애를 주입하지 않았다.
+
+재현: `bash scenario.sh up` → `bash scenario.sh measure` → 두 과제 검사 → `bash scenario.sh down`. up은 라우터 3대만 시작하고 원격 loopback 경로가 수렴할 때까지 기다린다. down은 이 3대만 정지한다. 측정 결과는 새 실행 시 갱신된다.
 
 출구 라우터, 해저 구간과 케이블 이름은 실제 관측이 뒷받침하는 범위에서만 기록한다. CDN·응답 필터링 등으로 확인되지 않으면 미확인으로 남긴다.
