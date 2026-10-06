@@ -1,0 +1,214 @@
+Week 06 Task 2 Part A — network A repeat (A2), NOT a third network
+Measured 2026-10-06 (Asia/Seoul). User identified this as the original connection A.
+Initial responding hops also match A. Prior A and B files are preserved.
+Live output; private subnet portions redacted, public transit/target IPs and RTT retained.
+One probe per TTL; -n -m 24 -q 1 -w 1. Traces overlap in time; single samples only.
+UDP and ICMP were run for each target. Supplemental runs fix Stanford to the old IP.
+'*' means no probe reply; a trace ending at max TTL is not proof of delivery failure.
+
+$ /usr/sbin/traceroute -n -m 24 -q 1 -w 1 www.korea.ac.kr
+traceroute to www.korea.ac.kr (163.152.6.10), 24 hops max, 40 byte packets
+ 1  172.16.[masked].2  6.883 ms
+ 2  192.168.[masked].132  4.596 ms
+ 3  163.152.233.129  6.431 ms
+ 4  163.152.205.206  10.947 ms
+ 5  *
+ 6  *
+ 7  *
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+
+$ /usr/sbin/traceroute -I -n -m 24 -q 1 -w 1 www.korea.ac.kr
+traceroute to www.korea.ac.kr (163.152.6.10), 24 hops max, 48 byte packets
+ 1  172.16.[masked].2  6.818 ms
+ 2  192.168.[masked].132  4.667 ms
+ 3  163.152.233.129  6.517 ms
+ 4  163.152.205.206  12.809 ms
+ 5  *
+ 6  163.152.4.140  9.413 ms
+ 7  163.152.4.150  13.034 ms
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+
+$ /usr/sbin/traceroute -n -m 24 -q 1 -w 1 www.stanford.edu
+traceroute: Warning: www.stanford.edu has multiple addresses; using 15.197.167.90
+traceroute to stanford.netlifyglobalcdn.com (15.197.167.90), 24 hops max, 40 byte packets
+ 1  172.16.[masked].2  4.159 ms
+ 2  192.168.[masked].132  3.283 ms
+ 3  163.152.233.129  2.685 ms
+ 4  175.121.235.141  6.597 ms
+ 5  10.[masked].[masked].142  11.652 ms
+ 6  10.[masked].[masked].116  11.414 ms
+ 7  10.[masked].[masked].129  8.921 ms
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+
+$ /usr/sbin/traceroute -I -n -m 24 -q 1 -w 1 www.stanford.edu
+traceroute: Warning: www.stanford.edu has multiple addresses; using 15.197.167.90
+traceroute to stanford.netlifyglobalcdn.com (15.197.167.90), 24 hops max, 48 byte packets
+ 1  172.16.[masked].2  4.275 ms
+ 2  192.168.[masked].132  5.766 ms
+ 3  163.152.233.129  2.749 ms
+ 4  175.121.235.141  8.757 ms
+ 5  10.[masked].[masked].142  8.886 ms
+ 6  10.[masked].[masked].118  9.431 ms
+ 7  10.[masked].[masked].119  7.445 ms
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+
+$ /usr/sbin/traceroute -n -m 24 -q 1 -w 1 1.1.1.1
+traceroute to 1.1.1.1 (1.1.1.1), 24 hops max, 40 byte packets
+ 1  172.16.[masked].2  4.025 ms
+ 2  192.168.[masked].132  5.008 ms
+ 3  163.152.233.129  6.043 ms
+ 4  175.121.235.141  5.901 ms
+ 5  10.[masked].[masked].142  5.138 ms
+ 6  10.[masked].[masked].120  15.270 ms
+ 7  10.[masked].[masked].65  9.319 ms
+ 8  39.120.253.58  7.675 ms
+ 9  211.45.68.25  8.524 ms
+10  211.45.68.26  7.269 ms
+11  *
+12  141.101.82.9  9.891 ms
+13  1.1.1.1  7.526 ms
+
+$ /usr/sbin/traceroute -I -n -m 24 -q 1 -w 1 1.1.1.1
+traceroute to 1.1.1.1 (1.1.1.1), 24 hops max, 48 byte packets
+ 1  172.16.[masked].2  3.706 ms
+ 2  192.168.[masked].132  6.098 ms
+ 3  163.152.233.129  3.242 ms
+ 4  175.121.235.141  5.447 ms
+ 5  10.[masked].[masked].142  5.671 ms
+ 6  10.[masked].[masked].128  11.884 ms
+ 7  10.[masked].[masked].133  9.441 ms
+ 8  39.120.253.62  7.870 ms
+ 9  211.45.68.13  8.292 ms
+10  211.45.68.14  7.511 ms
+11  *
+12  141.101.82.14  8.980 ms
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+
+$ /usr/sbin/traceroute -n -m 24 -q 1 -w 1 3.33.186.135
+traceroute to 3.33.186.135 (3.33.186.135), 24 hops max, 40 byte packets
+ 1  172.16.[masked].2  5.638 ms
+ 2  192.168.[masked].132  9.496 ms
+ 3  163.152.233.129  3.372 ms
+ 4  175.121.235.141  6.200 ms
+ 5  10.[masked].[masked].142  7.571 ms
+ 6  10.[masked].[masked].116  7.286 ms
+ 7  10.[masked].[masked].153  6.550 ms
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+
+$ /usr/sbin/traceroute -I -n -m 24 -q 1 -w 1 3.33.186.135
+traceroute to 3.33.186.135 (3.33.186.135), 24 hops max, 48 byte packets
+ 1  172.16.[masked].2  4.995 ms
+ 2  192.168.[masked].132  3.385 ms
+ 3  163.152.233.129  3.145 ms
+ 4  175.121.235.141  3.529 ms
+ 5  10.[masked].[masked].142  3.679 ms
+ 6  10.[masked].[masked].116  11.196 ms
+ 7  10.[masked].[masked].141  15.045 ms
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
