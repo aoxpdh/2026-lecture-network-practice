@@ -138,7 +138,7 @@ def snapshot(name):
     text = "".join(f"===== {r} =====\n" + vty(r, "show ip route ospf",
                    "show ip ospf neighbor", "show ip ospf interface") + "\n"
                    for r in ROUTERS)
-    (OUT / name).write_text(text, encoding="utf-8")
+    (OUT / name).write_text(text.rstrip() + "\n", encoding="utf-8")
 
 
 def cost(links, value):

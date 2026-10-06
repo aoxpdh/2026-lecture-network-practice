@@ -176,5 +176,3 @@ lo is up
     Hello due in inactive
   Neighbor Count is 0, Adjacent neighbor count is 0
   Graceful Restart hello delay: 10s
-
-
