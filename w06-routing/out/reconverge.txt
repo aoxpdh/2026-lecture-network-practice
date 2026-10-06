@@ -1,0 +1,15 @@
+monotonic wall time before mutation; 0.5s polling plus Docker overhead; six selected FIB routes must match twice; single trial
+Hello=10s, Dead=40s, Wait=40s (raw interface output in route snapshots).
+Timing begins before Docker mutation commands; includes command/poll overhead.
+first_match is an upper bound on when the six routes became correct, not an exact outage.
+The three routers' JSON queries are concurrent, not an atomic network snapshot.
+No packet-delivery outage duration was measured; these are routing/FIB observations.
+interface_down: only r1's r1-r2 interface is administratively down.
+silent_packet_loss: tc netem drops 100% of egress on BOTH r1-r2 endpoints; carrier stays up.
+cost_10_to_100: only r1's r1-r3 outgoing OSPF cost is raised.
+
+interface_down: first_correct=0.219722s confirmed=0.863155s
+interface_restore: first_correct=12.726508s confirmed=13.385706s
+cost_10_to_100: first_correct=0.278886s confirmed=0.946538s
+silent_packet_loss: first_correct=30.815260s confirmed=31.454923s
+silent_restore: first_correct=14.141683s confirmed=14.778129s

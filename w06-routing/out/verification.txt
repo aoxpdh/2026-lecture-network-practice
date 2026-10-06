@@ -1,0 +1,40 @@
+Week 06 final verification
+
+python3 test_tasks.py
+  9 passed, 0 failed, 1 skipped
+  The skip is R5's human-graded wall-time explanation, not a missing execution.
+  Official 1,000-event benchmark: 0 wrong, 363 SPF runs vs 1,001 baseline.
+
+python3 ../check.py w06
+  Format check passed. All required output files are present and nonempty.
+
+python3 -m unittest test_routing_edges
+  Ran 3 tests: OK (includes 20 seeds x 300 events).
+
+OSPF evidence replay
+  Replayed all 97 stored polling samples with the stricter exact-next-hop matcher.
+  Every stored success/failure decision was preserved.
+  For each event's final sample, deliberate wrong metric, unselected route,
+  wrong next hop, missing FIB flag and inactive hop were rejected.
+
+bash scenario.sh up / routes
+  All six remote loopback routes converged; all three routers printed OSPF tables.
+
+bash -n scenario.sh / git diff --check
+  Passed.
+
+Limits
+  Format tests do not grade observation quality or establish the unidentified
+  campus exit/ocean crossing. FIB timing does not measure packet-loss duration.
+
+Pre-publication review (2026-10-06)
+  Reviewed six unpublished Lab 6 commits: 31 paths, 46 distinct file versions.
+  Filename/identifier checks found no credential-related entries, personal
+  absolute paths, email addresses, MAC addresses, binary captures or env files.
+  Commit authors/committers all use GitHub noreply addresses.
+  Three private-address classification warnings were the same special-use
+  transit hop, not RFC1918 personal addresses. Personal traceroute subnets
+  remain masked; public transit/target and synthetic Docker lab IPs are retained.
+  This is a scoped review, not a guarantee from a dedicated secret scanner.
+  Re-ran both assignment checks: 9 passed, 0 failed, 1 human-graded skip;
+  format check passed. No unrelated files were added.

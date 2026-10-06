@@ -27,6 +27,7 @@ Details and requirements are in **`task1.md`**, **`task2.md`**, **`task3.md`**.
 ```bash
 python3 task1_linkstate.py --verify
 bash scenario.sh up                   # Task 2 - needs Docker
+bash scenario.sh measure              # all router tables + five timed experiments
 python3 bench.py --yours
 python3 test_tasks.py
 ```
@@ -45,6 +46,22 @@ python3 test_tasks.py
 ```bash
 python3 ../check.py w06
 ```
+
+## Measuring Task 2
+
+For the reproducible Docker measurement, `scenario.sh up` starts only the three
+routers and waits for all remote loopback routes. The image is
+`quay.io/frrouting/frr:9.1.0`, per the
+[official FRR 9.1 release](https://frrouting.org/release/9.1/).
+Each router advertises `10.255.0.1/32`, `.2/32`, or `.3/32` to make rerouting
+unambiguous. `scenario.sh measure` discovers interfaces, measures administrative
+cut/restore, an outgoing cost increase, and silent packet loss/restore. It saves
+all three routers' tables and `out/ospf-measurements.json`, then restores links
+and costs. Timing requires all six selected remote loopback FIB routes to match
+expected next hops and metrics twice; it does not measure packet loss duration.
+Separate `cut`, `restore`, and `cost` commands remain available. `cost` leaves
+its change in place; restart the routers before a new full measurement.
+`scenario.sh down` stops only the lab routers.
 
 ## Path (B) · when Docker will not run
 

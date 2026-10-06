@@ -1,0 +1,19 @@
+Command: python3 bench.py --yours
+
+  400 routers, 1581 links, 1000 events
+
+  baseline       SPF runs  1001   wall   0.91s
+  yours          SPF runs   363   wall   1.25s   wrong after 0 event(s)
+
+   ok    table correct after every event
+   full SPF runs avoided  64%  (363 instead of 1001)
+
+   -> good
+
+Additional comparison using bench.run(..., check=False) for BOTH routers:
+  baseline       SPF runs  1001   wall   0.90s
+  yours          SPF runs   363   wall   0.33s
+
+The official --yours wall time includes 1,000 reference SPF validation calls
+only for YourRouter. Those are excluded from its SPF counter, but not its timer.
+Wall time varies per run. bench.py was not edited.
