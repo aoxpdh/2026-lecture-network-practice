@@ -14,6 +14,28 @@ in the packet. Build it.
     python3 task1_linkstate.py --verify
 """
 import argparse
+import heapq
+
+
+def _shortest_paths(graph, source):
+    """Keep the first discovered equal-cost path; pop ties by node name."""
+    distances, hops = {source: 0}, {}
+    queue, done = [(0, source)], set()
+    while queue:
+        cost, node = heapq.heappop(queue)
+        if node in done:
+            continue
+        done.add(node)
+        for neighbour, weight in sorted(graph[node].items()):
+            if neighbour in done:
+                continue
+            candidate = cost + weight
+            if candidate < distances.get(neighbour, float("inf")):
+                distances[neighbour] = candidate
+                hops[neighbour] = neighbour if node == source else hops[node]
+                heapq.heappush(queue, (candidate, neighbour))
+    distances.pop(source)
+    return distances, hops
 
 # Undirected weighted graph: node -> {neighbour: cost}
 TOPOLOGY = {
@@ -33,7 +55,8 @@ def dijkstra(graph, source):
 
     You write the loop. `heapq` is allowed; `networkx` is not.
     """
-    raise NotImplementedError("implement Dijkstra")
+    # The supplied verifier expects the source itself to be omitted.
+    return _shortest_paths(graph, source)[0]
 
 
 def forwarding_table(graph, source):
@@ -48,7 +71,7 @@ def forwarding_table(graph, source):
     works, but think about what a router does when two shortest paths tie, and
     pick a rule. Say which in observation.md.
     """
-    raise NotImplementedError("implement the forwarding table")
+    return _shortest_paths(graph, source)[1]
 
 
 def link_down(graph, a, b):

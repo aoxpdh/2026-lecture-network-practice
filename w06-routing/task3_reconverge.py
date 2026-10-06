@@ -27,15 +27,19 @@ import heapq
 SPF_RUNS = 0
 
 
-def dijkstra_table(graph, source):
+def dijkstra_table(graph, source, *, state=None):
     """Reference shortest-path-first. Returns {destination: first_hop}.
 
     Use THIS function whenever you need a full recompute. Rolling your own to
     dodge the counter is not an optimisation, it is cheating the meter.
+
+    Optional state records distances and selected parents during this same SPF;
+    the original table, relaxation order and SPF counter remain unchanged.
     """
     global SPF_RUNS
     SPF_RUNS += 1
     best = {source: (0, None)}
+    parents = {}
     pq, done = [(0, source, None)], set()
     while pq:
         cost, node, first_hop = heapq.heappop(pq)
@@ -49,7 +53,12 @@ def dijkstra_table(graph, source):
             hop = nbr if node == source else first_hop
             if cost + w < best.get(nbr, (float("inf"), None))[0]:
                 best[nbr] = (cost + w, hop)
+                parents[nbr] = node
                 heapq.heappush(pq, (cost + w, nbr, hop))
+    if state is not None:
+        state.clear()
+        state.update(distances={n: c for n, (c, _) in best.items()},
+                     parents=parents)
     return {d: h for d, (_, h) in best.items() if d != source and h}
 
 
@@ -88,7 +97,36 @@ class YourRouter:
     """
 
     def __init__(self, graph, source):
-        raise NotImplementedError("write your router")
+        self.graph = {n: dict(edges) for n, edges in graph.items()}
+        self.source = source
+        self.state = {}
+        self._recompute()
+
+    def _recompute(self):
+        # Collect metadata inside the counted SPF, never by a second search.
+        self.table = dijkstra_table(self.graph, self.source, state=self.state)
 
     def link_change(self, a, b, cost):
-        raise NotImplementedError
+        old = self.graph[a].get(b)
+        if old == cost:
+            return
+        if cost is None:
+            self.graph[a].pop(b, None)
+            self.graph[b].pop(a, None)
+        else:
+            self.graph[a][b] = cost
+            self.graph[b][a] = cost
+
+        parents = self.state["parents"]
+        if cost is None or (old is not None and cost > old):
+            # Increasing/removing an unused edge preserves the selected tree.
+            affected = parents.get(a) == b or parents.get(b) == a
+        else:
+            distances = self.state["distances"]
+            da, db = distances.get(a, float("inf")), distances.get(b, float("inf"))
+            # Equality can change the reference's first-discovered tie winner.
+            # Disconnected endpoints cannot affect this source's table.
+            affected = ((da < float("inf") and da + cost <= db)
+                        or (db < float("inf") and db + cost <= da))
+        if affected:
+            self._recompute()

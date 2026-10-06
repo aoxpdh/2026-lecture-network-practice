@@ -1,0 +1,179 @@
+===== r1 =====
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric,
+       > - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+O   10.255.0.1/32 [110/0] is directly connected, lo, weight 1, 00:01:47
+O>* 10.255.0.2/32 [110/10] via 192.168.96.2, eth1, weight 1, 00:00:07
+O>* 10.255.0.3/32 [110/10] via 192.168.80.2, eth0, weight 1, 00:01:02
+O   192.168.80.0/20 [110/10] is directly connected, eth0, weight 1, 00:01:47
+O   192.168.96.0/20 [110/10] is directly connected, eth1, weight 1, 00:00:07
+O>* 192.168.112.0/20 [110/20] via 192.168.80.2, eth0, weight 1, 00:00:07
+  *                           via 192.168.96.2, eth1, weight 1, 00:00:07
+
+Neighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL
+3.3.3.3           1 Full/DR         1m06s             33.763s 192.168.80.2    eth0:192.168.80.3                    0     0     0
+2.2.2.2           1 Full/DR         6.236s            33.763s 192.168.96.2    eth1:192.168.96.3                    0     0     0
+
+eth0 is up
+  ifindex 67, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 192.168.80.3/20, Broadcast 192.168.95.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 1.1.1.1, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State Backup, Priority 1
+  Designated Router (ID) 3.3.3.3 Interface Address 192.168.80.2/20
+  Backup Designated Router (ID) 1.1.1.1, Interface Address 192.168.80.3
+  Multicast group memberships: OSPFAllRouters OSPFDesignatedRouters
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in 3.762s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+  Graceful Restart hello delay: 10s
+eth1 is up
+  ifindex 71, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 192.168.96.3/20, Broadcast 192.168.111.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 1.1.1.1, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State Backup, Priority 1
+  Designated Router (ID) 2.2.2.2 Interface Address 192.168.96.2/20
+  Backup Designated Router (ID) 1.1.1.1, Interface Address 192.168.96.3
+  Multicast group memberships: OSPFAllRouters OSPFDesignatedRouters
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in 6.587s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+  Graceful Restart hello delay: 10s
+lo is up
+  ifindex 1, MTU 65536 bytes, BW 0 Mbit <UP,LOOPBACK,RUNNING>
+  Internet Address 10.255.0.1/32, Broadcast 10.255.0.1, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 1.1.1.1, Network Type LOOPBACK, Cost: 0
+  Transmit Delay is 1 sec, State Loopback, Priority 1
+  No backup designated router on this network
+  Multicast group memberships: <None>
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in inactive
+  Neighbor Count is 0, Adjacent neighbor count is 0
+  Graceful Restart hello delay: 10s
+
+
+===== r2 =====
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric,
+       > - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+O>* 10.255.0.1/32 [110/10] via 192.168.96.3, eth0, weight 1, 00:00:02
+O   10.255.0.2/32 [110/0] is directly connected, lo, weight 1, 00:01:47
+O>* 10.255.0.3/32 [110/10] via 192.168.112.3, eth1, weight 1, 00:00:52
+O>* 192.168.80.0/20 [110/20] via 192.168.96.3, eth0, weight 1, 00:00:02
+  *                          via 192.168.112.3, eth1, weight 1, 00:00:02
+O   192.168.96.0/20 [110/10] is directly connected, eth0, weight 1, 00:01:47
+O   192.168.112.0/20 [110/10] is directly connected, eth1, weight 1, 00:01:02
+
+Neighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL
+1.1.1.1           1 Full/Backup     6.361s            36.463s 192.168.96.3    eth0:192.168.96.2                    0     0     0
+3.3.3.3           1 Full/DR         1m01s             33.638s 192.168.112.3   eth1:192.168.112.2                   0     0     0
+
+eth0 is up
+  ifindex 65, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 192.168.96.2/20, Broadcast 192.168.111.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 2.2.2.2, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2 Interface Address 192.168.96.2/20
+  Backup Designated Router (ID) 1.1.1.1, Interface Address 192.168.96.3
+  Saved Network-LSA sequence number 0x80000002
+  Multicast group memberships: OSPFAllRouters OSPFDesignatedRouters
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in 3.637s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+  Graceful Restart hello delay: 10s
+eth1 is up
+  ifindex 69, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 192.168.112.2/20, Broadcast 192.168.127.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 2.2.2.2, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State Backup, Priority 1
+  Designated Router (ID) 3.3.3.3 Interface Address 192.168.112.3/20
+  Backup Designated Router (ID) 2.2.2.2, Interface Address 192.168.112.2
+  Multicast group memberships: OSPFAllRouters OSPFDesignatedRouters
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in 3.637s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+  Graceful Restart hello delay: 10s
+lo is up
+  ifindex 1, MTU 65536 bytes, BW 0 Mbit <UP,LOOPBACK,RUNNING>
+  Internet Address 10.255.0.2/32, Broadcast 10.255.0.2, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 2.2.2.2, Network Type LOOPBACK, Cost: 0
+  Transmit Delay is 1 sec, State Loopback, Priority 1
+  No backup designated router on this network
+  Multicast group memberships: <None>
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in inactive
+  Neighbor Count is 0, Adjacent neighbor count is 0
+  Graceful Restart hello delay: 10s
+
+
+===== r3 =====
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric,
+       > - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+O>* 10.255.0.1/32 [110/10] via 192.168.80.3, eth0, weight 1, 00:00:57
+O>* 10.255.0.2/32 [110/10] via 192.168.112.2, eth1, weight 1, 00:00:52
+O   10.255.0.3/32 [110/0] is directly connected, lo, weight 1, 00:01:47
+O   192.168.80.0/20 [110/10] is directly connected, eth0, weight 1, 00:01:47
+O>* 192.168.96.0/20 [110/20] via 192.168.80.3, eth0, weight 1, 00:00:02
+  *                          via 192.168.112.2, eth1, weight 1, 00:00:02
+O   192.168.112.0/20 [110/10] is directly connected, eth1, weight 1, 00:01:47
+
+Neighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL
+1.1.1.1           1 Full/Backup     1m06s             33.500s 192.168.80.3    eth0:192.168.80.2                    0     0     0
+2.2.2.2           1 Full/Backup     1m01s             33.500s 192.168.112.2   eth1:192.168.112.3                   0     0     0
+
+eth0 is up
+  ifindex 63, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 192.168.80.2/20, Broadcast 192.168.95.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 3.3.3.3, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 3.3.3.3 Interface Address 192.168.80.2/20
+  Backup Designated Router (ID) 1.1.1.1, Interface Address 192.168.80.3
+  Multicast group memberships: OSPFAllRouters OSPFDesignatedRouters
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in 3.500s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+  Graceful Restart hello delay: 10s
+eth1 is up
+  ifindex 73, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 192.168.112.3/20, Broadcast 192.168.127.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 3.3.3.3, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 3.3.3.3 Interface Address 192.168.112.3/20
+  Backup Designated Router (ID) 2.2.2.2, Interface Address 192.168.112.2
+  Multicast group memberships: OSPFAllRouters OSPFDesignatedRouters
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in 3.500s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+  Graceful Restart hello delay: 10s
+lo is up
+  ifindex 1, MTU 65536 bytes, BW 0 Mbit <UP,LOOPBACK,RUNNING>
+  Internet Address 10.255.0.3/32, Broadcast 10.255.0.3, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 3.3.3.3, Network Type LOOPBACK, Cost: 0
+  Transmit Delay is 1 sec, State Loopback, Priority 1
+  No backup designated router on this network
+  Multicast group memberships: <None>
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in inactive
+  Neighbor Count is 0, Adjacent neighbor count is 0
+  Graceful Restart hello delay: 10s
